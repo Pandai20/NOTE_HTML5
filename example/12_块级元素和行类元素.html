@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块级元素和行类元素</title>
+</head>
+<body>
+    <p>这个是一个段落</p>
+    <!-- Alt+shift+↑/↓ 整行复制 -->
+    <p>这个是一个段落</p>
+    <div>
+        <!-- 块级元素 -->
+        有些元素独占一行，
+        <!-- 行类元素 -->
+        有些元素不独占一行
+    </div>
+
+    <!-- 行类元素: 不独占一行 -->
+    <input type="text">
+    <input type="text">
+    <span>我是一个行类元素，</span>
+    <span>我是二个行类元素</span>
+
+    <h3>=====行类、块元素的使用规则========</h3>
+    <!-- 规则1：块级元素中：行类元素、块级元素几乎什么都能写 -->
+    <div>
+        <span>我是块元素，我能写在行类元素中</span>
+    </div>
+    <!-- 规则2：行类元素中能写行类元素，但是不能写块元素 -->
+    <span>
+        <input type="text">
+        <span>我是一个行类元素span</span>
+
+        <div>我是一个块元素，我不能写在行类，但是浏览器帮我改正了，以后CSS调试会出现问题</div>
+    </span>
+    <span>块元素，由于上一个span中有违反规则，使用了行类元素，导致CSS设置出现问题</span>
+
+    <!-- 特殊规则：h1-h6不能相互嵌套 -->
+    <!-- 特殊规则：p标签中不能写块元素 -->
+</body>
+</html>

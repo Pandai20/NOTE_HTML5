@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超链接锚点</title>
+</head>
+<body>
+    <!-- 锚点：跳转到页面的指定位置,
+      1.a标签配合 + name属性 
+      2.其他标签配合 + id属性  现在好像一般是使用id
+      name/id值最好为唯一，且id最好不以数字开头
+      跳转时href的值： #+name/id值
+    -->
+    <a href="#bjx">看北极熊</a>
+    <a href="#baba">看北极熊2</a>
+
+    <p>我要看北极光</p>
+    <img width="300" src="000.jpg" alt="北极熊">
+
+    <p>我看小视频</p>
+    <video src="./path_test/002.mp4" controls></video>
+
+
+    <!-- 添加一个锚点 -->
+    <a name="bjx"></a>
+    <p id="baba">我要一只北极熊</p>
+    <img width="300" src="./path_test/001.jpg" alt="北极熊">
+
+
+    <p>=============</p>
+    <a href="#">回到顶部</a>
+    <a href="">刷新页面</a>
+
+    <p>===看其他页面中的锚点===</p>
+    <a href="16_超链接_跳转页面.html#maodian1">看其他页面中的锚点</a>
+
+    <p>===javascript交互===</p>
+    <a href="javascript:alert(6666666);">点击交互</a>
+</body>
+</html>

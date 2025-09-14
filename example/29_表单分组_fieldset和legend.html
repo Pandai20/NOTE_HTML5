@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签_fieldset和legend</title>
+</head>
+<body>
+    <form action="https://search.jd.com/search">
+        <!--
+            fieldset :表单控件分组
+            legend   :分组的标题
+        -->
+        <fieldset>
+            <legend>主要信息</legend>
+            <label for="zhanghu">账户：</label>
+            <input id="zhanghu" type="text" name="account" maxlength="10"><br>
+
+            <label for="mima">密码：</label><input id="mima" type="password" name="pwd" maxlength="6"><br>
+            <label>
+                密密：<input id="mima1" type="password" name="pwd" maxlength="6">
+            </label><br>
+
+            性别：
+                <input id="xingbie" type="radio" name="gender" value="male" >
+                <label for="xingbie">男</label>
+
+                <label><input  type="radio" name="gender" value="female">女</label>
+                <br>
+        </fieldset>
+        <!-- 附加信息分组 -->
+        <fieldset>
+            <legend>附加信息</legend>
+             爱好：     
+            <input  type="checkbox" name="hobby" value="smoke" >抽烟
+            <input  type="checkbox" name="hobby" value="drink">喝酒
+            <input  type="checkbox" name="hobby" value="perm" >烫头<br>
+
+            <label>
+                其他：
+                <textarea  name="other" cols="15" rows="3"></textarea>
+            </label>
+            <br>
+
+            籍贯：
+            <select name="place" id="">
+                <option  value="HB" >湖北</option>
+                <option  value="SH">上海</option>
+                <option  value="GD">关东</option>
+                <option  value="HN">海南</option>
+            </select>
+        </fieldset>
+       <br>
+
+               <!-- 选择分组 -->
+       <fieldset>
+            <legend>选择分组</legend>
+            
+            <button  >确认1</button>
+            <button  type="reset">重置1</button>
+            <button  type="button">检测是否被提交1</button>
+       </fieldset>
+       
+    </form>
+</body>
+</html>

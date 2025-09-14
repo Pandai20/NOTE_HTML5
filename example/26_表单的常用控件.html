@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单的常用的控件</title>
+</head>
+<body>
+    <form action="https://search.jd.com/search">
+        <!-- 1.value : 默认值text 文本输入框
+             maxlength: value的最大长度
+        -->
+        账户：<input type="text" name="account" value="zhangshan" maxlength="10"><br>
+        <!-- 2.password ：密码输入框
+        value ：密码一般不使用，无意义
+        -->
+        密码：<input type="password" name="pwd" value="123" maxlength="6"><br>
+        性别：
+        <!-- 3.radio ：单选框/单选按钮 --一定要有name
+                     就是像老式收音机的按钮所以叫做radio（收音机）
+            gender :性别的意思
+            checked : 默认勾选
+            https://search.jd.com/search?account=zhangshan&pwd=123&gender=on&
+            name所对应的值  value对应的值
+            1.account = zhangshan
+            2.pwd     = 123
+            3.gender  = on （如果没有给value，这里就是on）
+        -->
+            <input type="radio" name="gender" value="male" checked>男
+            <input type="radio" name="gender" value="female">女<br>
+
+
+        <!--4.checkbox ：复选框/复选按钮/多选按钮 --一定要有name
+            checked : 默认勾选
+        -->
+        爱好：
+            <input type="checkbox" name="hobby" value="smoke" checked>抽烟
+            <input type="checkbox" name="hobby" value="drink">喝酒
+            <input type="checkbox" name="hobby" value="perm" checked>烫头<br>
+
+        其他：
+        <!-- 9.textarea文本域
+         cols 宽
+         rows 高  一般使用css设置
+        -->
+        <textarea name="other" cols="15" rows="3"></textarea><br>
+
+        籍贯：
+        <!-- 10.select 选择框 
+            selected: 默认设置显示的值
+            name 属性:指定数据的名称。
+        提交以后 ： url&place=SH 
+        1.option 标签设置 value 属性，如果没有 value 属性，提交的数据是 option 中间的文字;
+        如果设置了 value 属性，提交的数据就是 value 的值(建议设置 value 属性)
+        -->
+        <select name="place" id="">
+            <option value="HB" selected>湖北</option>
+            <option value="SH">上海</option>
+            <option value="GD">关东</option>
+            <option value="HN">海南</option>
+        </select>
+
+        <!--5.checkbox ：隐藏域 
+            作用：提交表单的时候，携带一些固定的属性
+                  
+            name  属性:指定数据的名称。
+            value 属性:指定的是真正提交的数据
+        -->
+        <input type="hidden" name="form" value="toutiao"><br>
+
+        <!--6. 确认按钮的几种写法
+            1. <button>确认</button>
+            2. <input type="submit" value="确认2">
+        -->
+        <input type="submit" value="确认2">
+        <!-- button中的type默认值也是submit -->
+        <button>确认1</button>
+
+        <!-- 7.重置按钮 -->
+        <button type="reset">重置1</button>
+        <input type="reset" value="重置2">
+
+        <!-- 8.普通按钮 -->
+        <button type="button">检测是否被提交1</button>
+        <input type="button" value="检测是否被提交2">
+    </form>
+</body>
+</html>

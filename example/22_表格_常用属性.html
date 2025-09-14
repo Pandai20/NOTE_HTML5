@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格_常用属性</title>
+</head>
+<body>
+    <!-- border 添加边框 -->
+    <!-- cellspacing边框距离为0 -->
+    <table border="1" width="500" height="500" cellspacing="0">
+        <!-- 1.表格标题 -->
+        <caption>学生信息</caption>
+
+        <!-- 2.表格头部 -->
+         <!-- align对其方式 -->
+        <thead height="100" align="center" valign="middle">
+            <!-- tr = table row 行 -->
+            <tr>
+                <!-- th = table header  表头单元格（标题单元格）-->
+                <th width="50" height="100" align="right" valign="bottom">姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>民族</th>
+                <th>政治面貌</th>
+            </tr>
+        </thead>
+
+        <!-- 3.表格body -->
+         <!-- height="400" 这里的高度和上面表格高度相对计算 -->
+        <tbody height="400" align="center" valign="middle">
+            <tr>
+                <!-- td = table data -->
+                <td>张山</td>
+                <td>男</td>
+                <td>15</td>
+                <td>汉</td>
+                <td>人民群众</td>
+            </tr>
+
+            <tr>
+                <td>王五</td>
+                <td>男</td>
+                <td>17</td>
+                <td>汉</td>
+                <td>党员</td>
+            </tr>
+        </tbody>
+
+        <!-- 4.表格脚注 -->
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>共计：4人</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>框架标签</title>
+</head>
+<body>
+    <!-- 框架 可以嵌入网页
+     frameborder: 0 无边框 1 有边框
+     w
+    -->
+    <!-- <iframe src="https://www.baidu.com" width="200" height="200" frameborder="0"></iframe> -->
+    <!-- <iframe width="300" height="250" frameborder="0" src="https://pos.baidu.com/bcsm?conwid=300&conhei=250&rdid=6404216&dc=3&di=u6404216&s1=4056188182&s2=4151308712&dri=0&dis=0&dai=1&ps=3244x811&enu=encoding&exps=110277,110275,110261,110252,110011&ant=0&psi=ba58fde5bbcc5410&dcb=___adblockplus_&dtm=HTML_POST&dvi=0.0&dci=-1&dpt=none&tpr=1757857442242&ti=%E7%BD%91%E6%98%93%E6%96%B0%E9%97%BB&ari=2&ver=0620&kws=%E6%96%B0%E9%97%BB%2C%E6%96%B0%E9%97%BB%E4%B8%AD%E5%BF%83%2C%E6%96%B0%E9%97%BB%E9%A2%91%E9%81%93%2C%E6%97%B6%E4%BA%8B%E6%8A%A5%E9%81%93&dps=%E6%96%B0%E9%97%BB%2C%E6%96%B0%E9%97%BB%E4%B8%AD%E5%BF%83%2C%E5%8C%85%E5%90%AB%E6%9C%89%E6%97%B6%E6%94%BF%E6%96%B0%E9%97%BB%2C%E5%9B%BD%E5%86%85%E6%96%B0%E9%97%BB%2C%E5%9B%BD%E9%99%85%E6%96%B0%E9%97%BB%2C%E7%A4%BE%E4%BC%9A%E6%96%B0%E9%97%BB%2C%E6%97%B6%E4%BA%8B%E8%AF%84%E8%AE%BA%2C%E6%96%B0%E9%97%BB%E5%9B%BE%E7%89%87%2C%E6%96%B0%E9%97%BB%E4%B8%93%E9%A2%98%2C%E6%96%B0%E9%97%BB%E8%AE%BA%E5%9D%9B%2C%E5%86%9B%E4%BA%8B%2C%E5%8E%86%E5%8F%B2%2C%E7%9A%84%E4%B8%93%E4%B8%9A&dbv=2&drs=4&pcs=1263x1270&pss=1263x9701&cfv=0&cpl=5&chi=4&cce=true&cec=UTF-8&tlm=1757857381&prot=2&rw=1270&ltu=https%3A%2F%2Fnews.163.com%2F&ltr=https%3A%2F%2Fwww.google.com%2F&lcr=https%3A%2F%2Fwww.google.com%2F&ecd=1&dft=0&uc=2560x1392&pis=-1x-1&sr=2560x1440&tcn=1757857442&qn=c663a894c4acc9ff&ft=1"></iframe> -->
+    <!-- 嵌入其他内容 -->
+    <!-- <iframe src="./path_test/001.jpg" frameborder="1"></iframe> -->
+    <!-- <iframe src="./path_test/002.mp4" frameborder="0"></iframe> -->
+
+    <!-- iframe 不是一个块标签 
+     和超链接的target属性一起用
+    -->
+    <a href="https://www.baidu.com" target="container">点我看新闻</a>
+    <br>
+    <iframe name="container" src="" frameborder="0"></iframe>
+
+    <!-- 与表单的target属性配合使用 -->
+     <form action="https://so.toutiao.com/search" target="container">
+        <input type="text" name="keyword">
+        <button>搜索</button>
+     </form>
+</body>
+</html>
