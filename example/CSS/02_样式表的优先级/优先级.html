@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优先级</title>
+    <!-- <style>   --------属于内部样式（在head中）
+    1.行内样式 > 内部样式
+    即：行类样式中的属性会替代内部样式中的属性，如果内部样式中存在
+    行类样式中没有的属性，内部样式的特有的属性能够正常显示
+    -->
+    <style>
+        h1{
+            color: black;
+            font-size: 40px;
+        }
+    </style>
+
+    <!-- 比较内部样式和外部样式 -->
+    <!-- 1.内部样式在前,外部样式在后 
+    这个时候html显示的是外部样式的属性,说明下面的样式会覆盖上面的样式
+    -->
+    <style>
+        h2{
+            color: black;
+            font-size: 40px;
+        }
+    </style>
+    <link rel="stylesheet" href="./out.css">
+
+    <!-- 2.外部样式在前,内部样式在后 
+    显示的是内部样式,说明下面的样式覆盖了上面的样式
+    -->
+    <link rel="stylesheet" href="./out.css">
+    <style>
+        h3{
+            color: black;
+            font-size: 40px;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- 行类样式中是优先于内部样式的
+    -->
+    <h1 style="color: brown;">我是比较行类样式中的属性</h1>
+
+    <h2 style="color: rgb;">内部样式在前,外部样式在后的属性</h2>
+
+    <h3 style="color: rgb;">外部样式在前,内部样式在后的属性</h3>
+</body>
+</html>
