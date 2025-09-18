@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兄弟選擇器</title>
+    <style>
+        /* + 就是相鄰的,是往下的   --相鄰兄弟選擇器 */
+        div+p {
+            color: red;
+        }
+        /* + 就是所有的兄弟,是往下的   --通用兄弟選擇器 */
+        span p~p {
+            color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <p>前端</p>
+    <div>相鄰兄弟選擇器</div>
+    <!-- <h1>大前端</h1>
+        如果h1存在的話，就不是相鄰的，就沒有變化 
+    -->
+    <p>Java</p>
+    <p>大數據</p>
+    <p>UI</p>
+    <hr>
+    <!--  ~   通用兄弟選擇器
+    
+    -->
+    <span>
+        <p>通用兄弟選擇器</p>
+        <p>Java</p>
+        <p>大數據</p>
+        <p>UI</p>
+    </span>
+
+</body>
+</html>

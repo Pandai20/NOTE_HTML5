@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交集选择器</title>
+
+    <style>
+        .rich {
+            color: gold;
+        }
+        .beauty {
+            color: red;
+        }
+        /* 交集选择器中有元素的话，元素需要在开头
+
+        就是选择器名称带上符号贴在一起
+        p.类选择器1#id选择器.类选择器2#id选择器2
+        */
+        p.beauty#wc {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="rich">土豪张山</h2>
+    <h2 class="beauty" >明星李四</h2>
+    <br>
+    <p class="beauty" id="wc">小狗旺财</p>
+    <p class="beauty">小猪佩奇</p>
+</body>
+</html>

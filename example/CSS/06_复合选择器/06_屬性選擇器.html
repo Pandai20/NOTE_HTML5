@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>屬性選擇器</title>
+    <style>
+        /* 1.選中具有title屬性的值 */
+        [title] {
+            color: red;
+        }
+
+        /* 2.選中具有title屬性的值,且屬性值為selector2*/
+        [title="selector2"] {
+            color: rgb(5, 222, 175);
+        }
+        /* 3.選中具有title屬性的值,且屬性值以字母G為開頭*/
+        [title^="G"] {
+            color: black;
+        }
+
+        /* 4.選中具有title屬性的值,且屬性值以字母66為結尾*/
+        [title$="66"] {
+            color: red;
+        }
+
+        /* 5.選中具有title屬性的值,且屬性值包含數字4*/
+        [title*="4"] {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <!-- title ： 鼠標懸浮會有title提示詞 -->
+    <div title="Attribute selector">屬性選擇器</div>
+    <div title="Attribute selector1">屬性選擇器1</div>
+    <div title="selector2">屬性選擇器2</div>
+    <div title="Gselector2">屬性選擇器3</div>
+    <div title="Gselector66">屬性選擇器3</div>
+
+    <div title="selecto4">屬性選擇器4</div>
+    <div title="sel4ecto">屬性選擇器4</div>
+</body>
+</html>

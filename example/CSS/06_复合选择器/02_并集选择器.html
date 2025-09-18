@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>并集选择器</title>
+    <style>
+        .rich {
+            color: gold;
+            font-size: 50px;
+            background-color: brown;
+            width: 100px;
+        }
+
+        .beauty {
+            color: rgb(18, 63, 212);
+        }
+
+        .dog {
+            color: pink;
+        }
+        .pig {
+            color: red;
+        }
+        /* 并集选择器 用, 链接
+        让其他人都拥有字体、背景、宽度这些属性
+        任何选择器都能用
+         */
+
+        .rich,
+        .beauty,
+        .pig,
+        .dog,
+        #wzw {
+            font-size: 50px;
+            background-color: brown;
+            width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <h2 class="rich">土豪张山</h2>
+    <h2 class="beauty" >明星李四</h2>
+    <h2 >我没有样式</h2>
+    <hr>
+    <p class="dog" id="wc">小狗旺财</p>
+    <p class="pig">小猪佩奇</p>
+
+    <p id="wzw">王中王</p>
+</body>
+</html>

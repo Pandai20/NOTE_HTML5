@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子代選擇器</title>
+    <style>
+        /* 設置div中間的a為紅色,除了p標簽中的 */
+
+        div>a {
+            color: red;
+        }
+        /* 設置p中的a的顔色 */
+        div>p>a {
+            color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">張三</a>
+        <a href="#">李四</a>
+        <a href="#">王五</a>
+        <p>
+            <a href="#">趙六</a>
+        </p>
+    </div>
+</body>
+</html>
