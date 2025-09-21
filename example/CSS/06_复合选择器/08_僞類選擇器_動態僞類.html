@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>僞類選擇器_動態僞類</title>
+
+    <style>
+        /* 僞類： 很像類，但不是類，是元素特殊存在的狀態的描述
+        
+        ***注意： 這裏的link、visited、hover、action的順序是不能變的！
+        否則不會起作用！！！
+        lvha  
+        */
+
+        /* 選中的是沒有訪問的a元素，就是每點擊的顔色 */
+        a:link {
+            color: gold;
+        }
+        /* 選中的是訪問過的a元素，就是點擊了的顔色 */
+        a:visited {
+            color: gray;
+        }
+
+        /* 選中鼠標懸浮狀態的a元素 */
+        a:hover {
+            color: skyblue;http://www.baidu.com/
+        }
+
+        /* 選中是激活狀態的a元素，就是點擊不鬆開鼠標 */
+        a:active {
+            color: green;
+        }
+
+
+
+        /* span 中也有僞類 hover(懸浮) active(點擊) */
+        span:hover {
+            color: gold;
+        }
+        span:active {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com">去百度</a>
+    <a href="http://www.jd.com"">去京東</a>
+    <a href="http://www.toutiao.com"">頭條參照</a>
+
+    <hr>
+    <span>hello world</span>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_僞類選擇器_結構類_2</title>
+
+    <style>
+        /* 1.追後一個兒子，按照所有兄弟計算的 */
+        div>p:last-child {
+            color: rgb(245, 4, 176);
+        }
+
+        /* 2.選中的是div的第n個兒子p元素 按照所有兄弟計算的
+                n從0開始，每次加1
+        2n / even ：標記偶數
+        2n+1 / odd : 標記奇數
+        -n+5 ：標記前五個
+            必須得用an+b的形式，用在()中的規則，a可以是負數。
+        */
+        div>p:nth-child(2) {
+            color: gold;
+        }
+
+        /* 2.選中span兒子中的，計算同類型的第一/最後個類型是p元素的 
+            都是同一類型計算的
+        */
+        span>p:first-of-type {
+             color: rgb(3, 226, 70);
+        }
+        span>p:last-of-type {
+             color: rgb(3, 226, 70);
+        }
+        span>p:nth-of-type(2) {
+             color: rgb(233, 70, 6);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>張山：98分</span>
+        <p>李氏：92</p>
+        <p>王五：80</p>
+        <div>
+            <p>紅毛：77</p>
+            <p>紫毛：76</p>
+            <p>藍毛：75</p>
+        </div>
+        <p>潘六：66</p>
+        <!-- 如果最後一個兒子不是p標簽，則顔色無用 -->
+        <!-- <span>
+            <p>黑毛：55</p>
+        </span> -->
+
+    </div>
+    <hr>
+    <span>
+        <span>測試</span>
+        <p>紅毛：77</p>
+        <p>紫毛：76</p>
+        <p>藍毛：75</p>
+    </span>
+
+    <hr>
+
+</body>
+</html>

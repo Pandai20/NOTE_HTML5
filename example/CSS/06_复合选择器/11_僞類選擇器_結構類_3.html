@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_僞類選擇器_結構類_3</title>
+</head>
+    <style>
+    /* 選中div倒數的第n個兒子的p元素 (按照所有兄弟倒著數的）*/
+    div>p:nth-last-child(3) {
+        color: red;
+    }
+    /* 選中div倒數的第n個兒子的p元素 (按照同類型的倒著數的）*/
+    div>p:nth-last-of-type(1) {
+        color: rgb(239, 216, 5);
+    }
+    /* 選擇的是沒有兄弟的span元素 */
+    span:only-child {
+        color: rgb(5, 176, 2);
+    }
+    /* 選中的是沒有同類型兄弟的span元素,就是兄弟中沒有同類型的 */
+    /* span:only-of-type {
+        color: #e1cf04;
+    } */
+
+    /* 選中html中的根元素 */
+    :root {
+        background-color: gray;
+    }
+
+    /* 選中的是沒有類容的div元素 */
+    div:empty {
+        width: 55px;
+        height: 55px;
+        background-color: red;
+    }
+    </style>
+<body>
+    <div>
+        <span>測試1</span>
+        <p>紅毛：77</p>
+        <p>紫毛：76</p>
+        <p>藍毛：75</p>
+        <div>
+            <span>僞類only—child</span>
+        </div>
+        <p>張山：98分</p>
+        <p>李氏：92</p>
+        <p>王五：80</p>
+        <p>潘六：66</p>
+        <span>測試2</span>
+    </div>
+
+    <div></div>
+</body>
+</html>

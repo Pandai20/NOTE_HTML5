@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_僞類選擇器_結構類_1</title>
+    <style>
+        /*1.選中的是div的第一個兒子p元素 */
+        /* div>p:first-child {
+            color: red;
+        } */
+        
+
+        /*2.選中的是div的第一個兒子p元素 */
+        /* div>p:first-child {
+            color: red;
+        } */
+
+        /*3.選中的是div後代的第一個兒子p元素 */
+        div p:first-child {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 結構1 -->
+    <!-- <div>
+        <p>張山：98分</p>
+        <p>李氏：92</p>
+        <p>王五：80</p>
+        <p>潘六：66</p>
+    </div> -->
+
+    <!-- 結構2 -->
+     <!-- <div>
+        <span>張山：98分</span>
+        <p>李氏：92</p>
+        <p>王五：80</p>
+        <p>潘六：66</p>
+     </div> -->
+     
+    <!-- 結構3 -->
+     <div>
+        <p>潘六：66</p>
+        <marquee behavior="" direction="">
+            <p>張山：98分</p>
+        </marquee>
+        
+        <p>李氏：92</p>
+        <p>王五：80</p>
+
+     </div>
+</body>
+</html>
