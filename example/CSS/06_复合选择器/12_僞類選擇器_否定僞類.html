@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>僞類選擇器_否定僞類 </title>
+</head>
+    <style>
+        /* 選中div的兒子元素，但是排除類名為buliang的元素 */
+        /* div>p:not(.buliang) {
+            color: gray;
+        } */
+
+        
+        /* 選中div的兒子元素，但是排除title名"我不是不良人！"的元素 */
+        /* div>p:not([title^="我不是不良人！"]){
+            color: rebeccapurple;
+        } */
+
+        /* 選中的是div的兒子元素，但是排除第一個兒子 */
+        div>p:not(:first-child){
+            color: red;
+        }
+    </style>
+<body>
+    <div>
+        <p class="buliang">紅毛：77</p>
+        <p>張山：98分</p>
+        <p>李氏：92</p>
+        <p>王五：80</p>
+        <p>潘六：66</p>
+        <p class="buliang">紫毛：76</p>
+        <p class="buliang" title="我不是不良人！">藍毛：75</p>
+        <span>測試2</span>
+    </div>
+
+    <div></div>
+</body>
+</html>

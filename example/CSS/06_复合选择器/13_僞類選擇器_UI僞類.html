@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_僞類選擇器_UI僞類</title>
+    <style>
+        /* 選中的會放大
+        指揮選中複選框(checkbox)、單選按鈕(radio)
+        */
+        input:checked {
+            width: 55px;
+            height: 66px;
+        }
+
+        /* 選中的是被禁用的input元素 */
+        input:disabled {
+            background-color: gray;
+        }
+
+        /* 選中的是enabled的input元素 */
+        input:enabled {
+            background-color: rgb(84, 198, 22);
+        }
+
+    </style>
+</head>
+<body>
+    <input type="checkbox">
+    <input type="radio" name="gender">
+    <input type="radio" name="gender">
+    <input type="text">
+    <input type="text" disabled>
+</body>
+</html>
