@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>僞元素選擇器</title>
+    <style>
+        /* 通過僞元素選擇器 ::
+        選中的是div中的第一個元素
+        什麽是僞元素？--很像元素，但是不是元素，是元素中的一些特殊位置
+        */
+        div::first-letter {
+            color: red;
+            font-size: 40px;
+        }
+
+        /* 選中div中的第一行文字 */
+        div::first-line {
+            background-color: yellow;
+        }
+
+        /* 選中的是div中被鼠標選中的文字 */
+        div::selection {
+            background-color: orange;
+        }
+
+        /*選中的是input元素中的提示的文字*/
+        input::placeholder {
+            color: orchid;
+        }
+
+        /* 選中p元素的最開始位置，隨後創建一個子元素 */
+        p::before {
+            /* 加入的時候是無法被選中的 */
+            content: "￥";
+        }
+        /* 選中p元素的最后位置，隨後創建一個子元素 */
+        p::after {
+            content: ".00";
+        }
+    </style>
+</head>
+<body>
+    <!-- lorem :隨機生成英文
+        lorem + 數字  生成多少單詞的英文
+
+        僞元素選擇器使用 :: 
+    -->
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam vero optio corporis quos praesentium inventore ad sint quidem cupiditate dolorem, sunt assumenda deleniti doloribus unde debitis facilis libero nihil numquam. Nihil nisi commodi omnis totam similique delectus alias ipsam suscipit libero deleniti provident fuga voluptatum culpa temporibus possimus non molestias sit, unde asperiores rerum modi aspernatur! Cumque quis recusandae ipsa!</div>
+    
+    <input type="text" placeholder="請輸入用戶名">
+
+    <p>199</p>
+    <p>299</p>
+    <p>399</p>
+    <p>499</p>
+    <p>599</p>
+    <p>699</p>
+</body>
+</html>

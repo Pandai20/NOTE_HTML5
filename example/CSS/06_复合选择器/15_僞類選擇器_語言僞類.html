@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- 注意這裏為中文 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div:lang(en) {
+            color: red;
+        }
+        div:lang(zh-CN) {
+            color: green;
+        }
+        /* 只要語言是中文就會變成綠色 */
+        :lang(zh-CN) {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>我的房間</div>
+    <div lang="en">house</div>
+    <p>前端</p>
+    <span>你好</span>
+</body>
+</html>
