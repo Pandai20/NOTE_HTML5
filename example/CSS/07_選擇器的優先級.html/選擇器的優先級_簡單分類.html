@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇器的優先級</title>
+    <style>
+        /* !important > 行内 > ID選擇器 > 類選擇器 
+        > 元素選擇器 > 通配符選擇器  
+        > 繼承過來的
+        */
+
+        
+        /* 1. ID選擇器 > 類選擇器 */
+        /* 
+            #atguigu {
+                color: red;
+            }
+            .slogan {
+                color: yellow;
+            } 
+        */
+
+        /* 2.類選擇器 > 元素選擇器 */
+        /* 
+            div {
+                color: blue;
+            }
+            .slogan {
+                color: yellow;
+            } 
+        */
+
+        /* 2.元素選擇器 > 通配符選擇器*/
+        * {
+            color: green;
+        }
+        div {
+            color: rgb(9, 226, 223);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slogan" id="atguigu">驗證選擇器的優先級 </div>
+</body>
+</html>

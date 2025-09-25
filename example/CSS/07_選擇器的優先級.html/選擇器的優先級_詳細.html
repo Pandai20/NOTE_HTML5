@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇器的優先級_詳細</title>
+    <style>
+        /*權重的計算規則 (a,b,c)
+            a:ID選擇器的個數
+            b:類,僞類,屬性選擇器的個數
+            c:元素、僞元素 選擇器的個數        
+        */
+        /* 1.在屬性值後面 加上 !important 是權重比最高的 
+        2.并集選擇器的
+        
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            <span class="home">Welecome to my home!</span>
+            <span>歡迎同學們來學習！</span>
+        </p>
+
+    </div>
+</body>
+</html>

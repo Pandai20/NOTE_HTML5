@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>HEX或者HEXA</title>
+    <!-- HEX或者HEXA  本質上也是rgb 實際是用十六進制表示顏色值  -->
+    <style>
+        /* 第1字節 :red
+           第2字節 :blue
+           第3字節 :green
+        HEXA 中A 透明度也占用1字節
+        */
+        .ncolor {
+            color: #01ff01fa;
+        }
+        /* 如果每種顔色的兩位是相同的，就可以簡寫
+        eg: #ff9988  簡寫： #f98
+        簡寫 透明度也要簡寫
+
+        IE瀏覽器不支持HEXA  但支持HEX
+        */
+    </style>
+</head>
+<body>
+   
+    <h1 class="ncolor">我是HEX或者HEXA</h1>
+    <h1 class="ncolor1">我是HEX或者HEXA</h1>
+
+    <h1 class="rgba1">我是HEX或者HEXA</h1>
+</body>
+</html>

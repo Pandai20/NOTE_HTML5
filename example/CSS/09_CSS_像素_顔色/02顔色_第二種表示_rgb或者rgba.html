@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>rgb或rgba</title>
+    <!-- 取色器： fastStone capture -->
+    <style>
+        /* (250, 0, 0) 紅綠藍的比例不僅是0-255 */
+        .ncolor {
+            color: rgb(250, 0, 0);
+        }
+        .ncolor1 {
+            color: rgb(10, 10, 123);
+        }
+
+        /* rgba a:是用來設置透明度的意思 0-1 範圍之間
+            0 : 完全透明
+            0.5：半透明
+            1 ：不透明
+        */
+        .rgba1 {
+            color: rgba(44, 44, 225, 0.251);
+        }
+    </style>
+</head>
+<body>
+    <!-- rgb: 光的三原色 red green blue-->
+
+    <h1 class="ncolor">我是光的三原色</h1>
+    <h1 class="ncolor1">我是光的三原色</h1>
+
+    <h1 class="rgba1">我是rgba</h1>
+</body>
+</html>

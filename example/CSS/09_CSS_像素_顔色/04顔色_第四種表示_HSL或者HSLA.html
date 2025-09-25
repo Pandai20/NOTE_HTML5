@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>HSL或者HSLA</title>
+    <!-- HSL或者HSLA  本質上也是rgb 實際是用十六進制表示顏色值  -->
+    <style>
+        /* hsl(hue, saturation, lightness)
+           hue:色相 ，用角度表示（色相環） 單位 deg
+           saturation:飽和度 0% -100% 往正常顔色參入灰色
+           lightness：亮度 0% -100% 0%就變黑了
+        */
+        .ncolor {
+            color: hsl(0, 100%, 50%);
+        }
+
+        .ncolor1 {
+            color: hsl(60deg, 100%, 50%);
+        }
+
+        .ncolor2 {
+            color: hsl(120deg, 100%, 50%);
+        }
+
+        .ncolor3 {
+            color: hsl(360deg, 100%, 50%);
+        }
+
+        .ncolor4 {
+            color: hsl(360deg, 50%, 50%);
+        }
+    </style>
+</head>
+<body>
+   
+    <h1 class="ncolor">HSL或者HSLA</h1>
+    <h1 class="ncolor1">HSL或者HSLA 60deg</h1>
+
+    <h1 class="ncolor2">HSL或者HSLA 120deg</h1>
+    <h1 class="ncolor3">HSL或者HSLA 360deg</h1>
+    <h1 class="ncolor4">HSL或者HSLA 飽和度50%</h1>
+
+    <h1 class="ncolor5">HSL或者HSLA</h1>
+</body>
+</html>
