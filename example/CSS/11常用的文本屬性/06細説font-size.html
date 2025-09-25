@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06細説font-size</title>
+    <style>
+        div {
+            font-size: 40px;
+            background-color: aquamarine;
+            /* font-family: "宋体" ; */
+
+
+            /* 總結： 
+            1.由于字体设计原因，文字最终呈现的大小，
+            并不一定与 font-size 的值一致，
+            可能大，也可能小。
+                例如:font-size 设为 40px，最终呈现的文字，
+            可能比 40px 大，也可能比 40px 小。
+
+            2.通常情况下，文字相对字体设计框，
+            并不是垂直居中的，通常都 靠下 一些。
+            
+             */
+        }
+
+    </style>
+</head>
+<body>
+    <div>ggboy我學習前端三件套</div>
+
+    <span style="font-size: 40px;font-family: 微软雅黑;">前</span>
+    <span style="font-size: 40px;font-family: 楷体;">前</span>
+    <span style="font-size: 40px;font-family: 仿宋;">前</span>
+</body>
+</html>

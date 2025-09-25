@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字體族</title>
+    <style>
+        /* 个性化->字体  中寻找已经安装的字体 
+        一般在使用英文名稱，百度搜索
+        */
+        .front {
+            font-size: 100px;
+            font-family: "微软雅黑";
+        }
+        .front1 {
+            font-size: 100px;
+            font-family: "楷体";
+        }
+        .front2 {
+            font-size: 100px;
+            font-family: "华文彩云";
+        }
+        .front3 {
+            font-size: 100px;
+            font-family: "仿宋";
+        }
+        /* 可以设置多种字体 
+        先去找第一个，没在的话就往后找
+        */
+        .front4 {
+            font-size: 100px;
+            /* 字体最好都是 衬线字体 ：有棱角，顿挫的
+            或者全是 非衬线字体：无棱角
+
+            sans-serif :非衬线字体 ，前面全部找不到
+            最后会选择非衬线字体，一般在开发中会使用
+            sans-serif进行收尾
+            */
+            font-family: "微軟雅黑","仿宋","宋体",sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="front">我學習前端三件套</div>
+    <div class="front1">我學習前端三件套1</div>
+    <div class="front2">我學習前端三件套2</div>
+    <div class="front3">我學習前端三件套3</div>
+    <div class="front4">我學習前端三件套4</div>
+</body>
+</html>

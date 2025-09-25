@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本修飾</title>
+    <style>
+        div {
+            font-size: 20px;
+        }
+        .front1 {
+            /* 文本上劃綫 */
+           text-decoration: overline wavy green;
+        }
+        .front2 {
+            /* 文本下劃綫 
+            dotted :虛綫
+            wavy :波浪綫
+            這裏沒有順序要求的
+            */
+           text-decoration: underline dotted red;
+        }
+        .front3 {
+            /* 文本中間劃綫  刪除綫 */
+           text-decoration: line-through;
+        }
+        .front4 {
+           /* 沒有綫，無裝飾 */
+            text-decoration:none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="front1">Lorem ipsum dolor sit,我是間距.</div>
+    <div class="front2">Lorem ipsum dolor sit,我是間距.</div>
+    <div class="front3">Lorem ipsum dolor sit,我是間距.</div>
+    <div class="front4">Lorem ipsum dolor sit,我是間距.</div>
+</body>
+</html>

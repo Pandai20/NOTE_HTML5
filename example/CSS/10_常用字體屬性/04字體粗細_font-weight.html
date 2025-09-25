@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字體粗細font-weight</title>
+    <style>
+        div {
+            font-size: 100px;
+        }
+        .front {
+            /* lighter 細的 */
+            font-weight: lighter;
+        }
+        .front1 {
+            font-weight: normal;
+        }
+        .front2 {
+            /* bold 粗的 */
+           font-weight: bold;
+        }
+        .front3 {
+            /* bolder 也是粗的，得看你字體中有沒有設置這種 */
+           font-weight: bolder;
+        }
+        /* 100 -1000  數值的範圍 
+        100-300 和lighter差不多
+        400-500 和normal差不多
+        >600    和bold差不多
+        */
+        .front4 {
+            
+           font-weight: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="front">我學習前端三件套</div>
+    <div class="front1">我學習前端三件套1</div>
+    <div class="front2">我學習前端三件套2</div>
+    <div class="front3">我學習前端三件套3</div>
+    <div class="front4">我學習前端三件套4</div>
+</body>
+</html>
