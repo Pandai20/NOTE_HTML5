@@ -25,9 +25,10 @@
 
 ## 2. 块元素
 
-- 块元素会在页面中独占一行
+- 块元素会在页面中独占一行，不會與任何元素共用一行
 - 默认宽度是父元素的全部（会把父元素撑满）
 - 默认高度是被内容撑开（子元素）
+- 可以通過CSS設置寬高
 
 ![image-20210519225146959](https://img-blog.csdnimg.cn/img_convert/080c032067884d770c86ccbf274ed5e6.png)
 
@@ -37,10 +38,19 @@
 - 行内元素在页面中左向右水平排列（书写习惯一致）
 - 如果一行之中不能容纳下所有的行内元素，则元素会换到第二行继续自左向右排列
 - 行内元素的默认宽度和高度都是被内容撑开
+- *行内元素無法通過CSS設置寬高
 
 ![img](https://img-blog.csdnimg.cn/img_convert/979118a55475dd62fc9ec197e46b9e53.png)
 
-## 4. 盒子模型
+## 4. 行内块元素（inline-block)
+
+- 具有代表性的inline-block   ==> img
+- inline-block擁有行内元素的特點，并且能夠使用css設置寬高
+  注意：說兩種的也是對的，如果細分的話得加上行類塊元素
+
+
+
+## 5. 盒子模型
 
 > 网页设计中常听的属性名：内容(content)、内边距(padding)、边框(border)、外边距(margin)， CSS 盒子模型都具备这些属性。
 >
@@ -289,7 +299,7 @@ padding 内边距的简写属性，可以同时指定四个方向的内边距，
 
 ![image-20210520222739940](https://img-blog.csdnimg.cn/img_convert/c5f16dc4f083b514f7e53b1f37f520db.png)
 
-## 5. 水平方向布局
+## 6. 水平方向布局
 
 元素在其父元素中水平方向的位置由以下几个属性共同决定
 
@@ -361,7 +371,7 @@ padding 内边距的简写属性，可以同时指定四个方向的内边距，
 
 ![image-20210520230544849](https://img-blog.csdnimg.cn/img_convert/748467abb9de8656045946e34df805dc.png)
 
-## 6. 垂直方向布局
+## 7. 垂直方向布局
 
 ### 元素溢出
 
@@ -705,7 +715,7 @@ width：200px;
 
 ![img](https://img-blog.csdnimg.cn/img_convert/7fc54dc97b5e27a2bbfc46ea40e71094.png)
 
-## 7. 行内元素的盒模型
+## 8. 行内元素的盒模型
 
 - 行内元素不支持设置宽度和高度
 
@@ -762,7 +772,7 @@ width：200px;
     margin: 100px;
     background-color: yellow;
   }
-
+  
   .box1 {
     width: 200px;
     height: 200px;
@@ -848,7 +858,7 @@ width：200px;
 
 ![img](https://img-blog.csdnimg.cn/img_convert/3d18d3f523a2915742719468d7968e3d.png)
 
-## 8. 浏览器的默认样式
+## 9. 浏览器的默认样式
 
 通常情况，浏览器都会为元素设置一些默认样式
 

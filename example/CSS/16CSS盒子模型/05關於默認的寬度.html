@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05關於默認的寬度</title>
+    <style>
+        div {
+            height: 200px;
+            margin: 50px;
+            border: 1px solid black;
+            padding: 1px;
+            /* 如果寬度是沒有設置的話，margin，border，padding
+            就會影響到這個盒子的寬度
+            
+            就相當於盒子本身是一個隨機固定的值
+            然後如果設置了其他屬性的寬度，他的content值就會變小
+
+            内容区的宽度= 父的 content 
+                        -自身的左右 margin 
+                        -自身的左右 border
+                        -自身的左右 padding。
+            */
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div>你好啊</div>
+</body>
+</html>

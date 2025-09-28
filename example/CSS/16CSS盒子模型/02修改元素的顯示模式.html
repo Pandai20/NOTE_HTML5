@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02修改元素的顯示模式</title>
+    <style>
+        div {
+            font-size: 20px;
+
+            /* 將div從塊元素 變爲 行内塊元素inline-block */
+            display: inline;
+        }
+        #id1 {
+            background-color: skyblue;
+        }
+        #id2 {
+            background-color: orange;
+        }
+        #id3 {
+            background-color: gray;
+        }
+        #id4 {
+            background-color: gold;
+        }
+
+        /* 將a標簽：本身是行内元素  變爲  塊元素 */
+        a {
+            /*元素會被隱藏 */
+            display: none;
+            /* 變爲行内元素 */
+            display: inline;
+            /* 變爲行内塊元素 */
+            display: inline-block;
+            /* 元素作爲塊級元素顯示 */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="id1">你好1</div>
+    <div id="id2">你好2</div>
+    <div id="id3">你好3</div>
+    <div id="id4">你好4</div>
+    <hr>
+    <a href="https://www.baidu.com">去百度</a>
+    <a href="https://www.baidu.com">去京東</a>
+    <a href="https://www.baidu.com">去頭條</a>
+
+</body>
+</html>

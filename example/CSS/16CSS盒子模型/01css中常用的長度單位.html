@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css中常用的長度單位</title>
+    <style>
+        #d1 {
+            /* 1.使用px（像素）作爲長度單位 */
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            background-color: skyblue;
+        }
+        #d2 {
+            /* 2.使用em（相對於當前元素的font-size的倍數）作爲長度單位 */
+            width: 5em; 
+            height: 5em;
+            /* 5em 就相當於 5*20 = 100px 
+            font-size的大小也是em單位，那就是找根的大小
+            在瀏覽器的設置中一般是16px
+            */
+            font-size: 20px;
+            background-color: yellowgreen;
+        }
+        #d3 {
+            /* 3.使用rem（相對於根元素html的font-size）作爲長度單位 */
+            width: 10rem;
+            height: 10rem;;
+            font-size: 20px;
+            background-color: green;
+        }
+
+        #d4 {
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            background-color: gray;
+        }
+        .inside {
+            /* 4.使用%（相對於父親的大小）作爲長度單位 */
+            width: 50%;
+            height: 25%;
+            font-size: 150%;
+            background-color: orange;
+        }
+
+        #d5 {
+            font-size: 20px;
+            text-indent: 40px;
+            /* 這裏使用縮進兩個font-size的大小 */
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">1</div><br>    
+    <div id="d2">2</div><br>
+    <div id="d3">3</div><br>
+    <div id="d4">
+        <div class="inside">4</div>
+    </div><br>
+    <hr>
+    <div id="d5">5</div><br>
+</body>
+</html>
