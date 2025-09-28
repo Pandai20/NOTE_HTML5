@@ -406,12 +406,12 @@ iconfont 是阿里的一个图标字体库，海量图标库，图标字体非�
 
 ## 6. 行高
 
-### 行高`line height`
+### 行高`line-height`
 
 文字占有的实际高度，可以通过`line-height`来设置行高
 
 - 可以直接指定一个大小 `px`/`em`
-- 也可以直接为行高设置一个小数（字体大小的倍数）
+- 也可以直接为行高设置一个小数（字体大小的倍数，通常是1.5-2倍的font-size大小的像素值，一般使用這個）
 
 行高经常还用来设置文字的行间距：`行间距 = 行高 - 字体大小`
 
@@ -443,13 +443,13 @@ font-size: 100px;
 
 经测试，`line-height`大约比`100.444px`略大一点时，`content`高度才会大于`100px`，暂未知原因
 
-### 字体的简写属性
+### 字体的简写属性（字體複合屬性）
 
 `font` 可以设置字体相关的所有属性：
 
 `font: font-style font-variant font-weight font-size/line-height font-family`
 
-其中某些值可以不写，会用默认值
+其中某些值可以不写，会用默认值。==font-size/line-height== 和 ==font-family==是固定順序的。一般推薦是寫符合屬性。
 
 **默认值**
 
@@ -485,7 +485,7 @@ font: bold small-caps italic 50px "Courier New", Courier, monospace;
 
 ## 7. 文本对齐方式
 
-### 水平对齐
+### 水平对齐text-align
 
 `text-align` 文本的水平对齐
 
@@ -512,9 +512,11 @@ font: bold small-caps italic 50px "Courier New", Courier, monospace;
 
 ![image-20210601233114528](https://img-blog.csdnimg.cn/img_convert/0c1230e4dee40476e5e9a75141358962.png)
 
-### 垂直对齐
+### 垂直对齐vertical-align
 
 `vertical-align` 设置元素垂直对齐的方式
+	作用：用於指定同一行元素之間，或者表格單元内文字的垂直對齊方式。
+	注意：vertical-align不能控制塊元素。
 
 | `vertical-align` 属性值 | 对齐方式说明 |
 | :---------------------- | :----------- |
@@ -525,17 +527,25 @@ font: bold small-caps italic 50px "Courier New", Courier, monospace;
 
 **`baseline` 基线对齐**
 
+作用：使元素的基綫與父元素的基綫對齊。
+
 ![image-20210601234706602](https://img-blog.csdnimg.cn/img_convert/c2b19aeed53f064e7fe82ca948793bf2.png)
 
 **`top` 顶部对齐**
+
+作用：使元素的頂部與其坐在行的頂部對齊。
 
 ![image-20210601234726066](https://img-blog.csdnimg.cn/img_convert/4b3a93fc6638b26acc1105a7f02242a7.png)
 
 **`bottom` 底部对齐**
 
+作用：是的元素的底部與其所在行的底部對齊。
+
 ![image-20210601234744834](https://img-blog.csdnimg.cn/img_convert/f5c906386a4ea3c9ffdc80cde6b4291f.png)
 
 **`middle` 居中对齐**
+
+作用：使元素的中部與父元素的基綫加上父元素字母X的一半對其
 
 ![image-20210601234759927](https://img-blog.csdnimg.cn/img_convert/e5b1f3fc76f55a8600ab3d73e244c529.png)
 

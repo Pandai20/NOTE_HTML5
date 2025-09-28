@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01邊框相關的屬性</title>
+    <style>
+        table {
+            /* 1.設置邊框第一種方式 */
+            border-width: 2px;
+            border-color: gold;
+            /* 指定邊框的顔色為實綫 */
+            border-style: solid;
+
+            /* 2.通過複合屬性設置邊框 */
+            border: 2px green dotted;
+        }
+        /* 設置table head 和table date邊框 */
+        h2,caption,th,td {
+            border: 2px gray solid;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>邊框都能被使用</h2>
+    <table>
+        <caption>人員信息</caption>
+        <thead>
+            <tr>
+                <th>序號</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性別</th>
+                <th>政治面貌</th>
+            </tr>
+        </thead>
+            
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>張三</td>
+                <td>19</td>
+                <td>男</td>
+                <td>黨員</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>王六</td>
+                <td>20</td>
+                <td>女</td>
+                <td>群衆</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>黑子</td>
+                <td>22</td>
+                <td>男</td>
+                <td>團員</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>包子</td>
+                <td>25</td>
+                <td>女</td>
+                <td>黨員</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>小花</td>
+                <td>30</td>
+                <td>男</td>
+                <td>黨員</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

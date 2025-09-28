@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14背景相關的屬性</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            border: 2px black solid;
+            font-size: 40px;
+            /* 1.設置背景顔色，默認是透明的(transparent) */
+            background-color: skyblue;
+            /* 2.設置背景圖片 */
+            background-image: url(../../dahuangmao-09.png);
+            /* 4.設置圖片背景的重複方式 
+            repeat-x  :水平方向重複
+            repeat-y :垂直方向重複
+            */
+            background-repeat: no-repeat;
+            /* 5.控制背景圖片的位置 --①.第一種寫法
+            left top 左上角
+            right bottom 右下角
+            center bottom 中下
+            center center / center  ： 完全居中
+            */
+            /* background-position: bottom; */
+            /* 6.控制背景圖片的位置 --②.第二種寫法：具體的像素值 */
+            background-position: 20px 100px;
+            /*  默認中間的位置 */
+            background-position: 200px;
+
+            /* 7.複合屬性 
+            green 這裏如果不寫的話默認就是transparent
+            會把上面的skyblue給覆蓋掉
+            */
+            background: green url(../../dahuangmao-09.png) no-repeat 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>你好啊</div>
+</body>
+</html>

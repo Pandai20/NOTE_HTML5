@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01列表相關屬性</title>
+    <style>
+        ul  {
+            /* 設置列表前面的符號、圖形 
+            none: 不設置很常用
+            decimal：數字
+            */
+            list-style-type: decimal;
+
+            /* 設置符號列表的位置 */
+            list-style-position: outside;
+
+            /* 自定意義列表符號 */
+            list-style-image: url("這裏填入圖片的地址");
+
+            
+            /* 符合屬性  沒有順序*/
+            list-style: none inside url("這裏填入圖片的地址");
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>《震驚，某男子不停學習html竟是爲了》</li>
+        <li>《一夜暴富指南》</li>
+        <li>《給成功男人的建議》</li>
+    </ul>
+</body>
+</html>

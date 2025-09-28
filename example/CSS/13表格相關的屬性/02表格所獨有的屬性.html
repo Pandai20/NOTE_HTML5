@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02表格所獨有的屬性</title>
+    <style>
+        table {
+            border: 2px green dotted;
+            width: 500px;
+            /* 1.控制表格的列寬 */
+            table-layout: auto;
+            /* 2.控制單元格的間距(生效的前提的不能合并邊框) */
+            border-spacing: 2px;
+            /* 3.合并相鄰的單元格
+            合并之後，單元格間距就無法使用了
+            */
+            /* border-collapse: collapse; */
+            /* 4.隱藏沒有内容的單元格(生效的前提的不能合并邊框)*/
+            empty-cells: hide;
+            /* 5.設置表格標題的位置 */
+            caption-side: top;
+        }
+        /* 設置table head 和table date邊框 */
+        th,td {
+            border: 2px gray solid;
+        }
+
+    </style>
+</head>
+<body>
+   
+    <table>
+        <caption>人員信息</caption>
+        <thead>
+            <tr>
+                <th>序號</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性別</th>
+                <th>政治面貌</th>
+            </tr>
+        </thead>
+            
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>張三</td>
+                <td>19</td>
+                <td>男</td>
+                <td>黨員</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>王六</td>
+                <td>20</td>
+                <td>女</td>
+                <td>群衆</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>黑子</td>
+                <td>22</td>
+                <td></td>
+                <td>團員</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>包子</td>
+                <td>25</td>
+                <td>女</td>
+                <td>黨員</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>小花</td>
+                <td>30</td>
+                <td>男</td>
+                <td>黨員</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

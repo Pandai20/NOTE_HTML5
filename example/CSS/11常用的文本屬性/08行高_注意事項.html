@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08行高_注意事項</title>
+    <style>
+        /* 1.行高過小會怎麽樣？ --文字重叠，最小值是0，且不能為負數 */
+        #line_height {
+            font-size: 40px;
+            background-color: skyblue;
+            /* 實際大小是  40px * 1.5 = 60px */
+            line-height: 1.5;
+        }
+        /* 2.行高是可以繼承的，因此最好是寫數值 */
+        /* 3.line-heighth和heighth是什麽關係?
+                設置了height,那麽高度就是height的值
+                不設置heighth的時候,就會根據line_hight計算高度
+        */
+        /* 應用場景：
+            1.對於多行文字：控制行與行之間的距離
+            2.對於單行文字：讓line-heighth==heighth，可以實現文字居中
+        */
+
+    </style>
+</head>
+<body>
+    <div id="line_height">ggboy學習前端三件套ggboy學習前端三件套,ggboy學習前端三件套,ggboy學習前端三件套,ggboy學習前端三件套,ggboy學習前端三件套,ggboy學習前端三件套,ggboy學習前端三件套,</div>
+</body>
+</html>

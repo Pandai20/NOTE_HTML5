@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠標相關的屬性</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            cursor: pointer;
+        }
+
+        .pointer {
+            /* cursor :設置鼠標光標的樣式 */
+            /*pointer 小手 
+            text 文字選擇器
+            wait:等待
+            */
+            cursor: pointer;
+        }
+
+        .wait {
+            /* 自定意義鼠標樣式 */
+            cursor: url("自定意義的鼠標樣式.jpg"),pointer;
+            cursor: wait;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        把鼠標移動到此
+        <br>
+        <button class="pointer">cheack</button>
+        <button >cheack1</button>
+        <br>
+        <input class="wait" type="text">
+        <input type="text">
+    </div>
+</body>
+</html>
