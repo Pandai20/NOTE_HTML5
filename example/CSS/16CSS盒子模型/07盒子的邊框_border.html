@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07盒子的邊框_border</title>
+    <style>
+        div {
+            background-color: skyblue;
+            height: 400px;
+            font-size: 40px;
+            /* 1.首先設置邊框 */
+            border-width: 10px;
+            border-color: red;
+            /* 如果單純只是設置style的話，默認像素是3px。
+            但是由於電腦在設置->縮放中幫我們進行縮放了，
+            那麽一般我們看到是的縮放後的像素值
+            */
+            border-style: solid;
+
+            /* 2.單獨設置border的指定一邊 */
+            border-right-width: 20px;
+            border-left-width: 20px;
+            border-top-width: 20px;
+            border-bottom-width: 30px;
+
+            border-right-color: red;
+            border-left-color: yellowgreen;
+            border-top-color: gold;
+            border-bottom-color: gray;
+
+            border-right-style: solid;
+            border-left-style: double;
+            border-top-style:dotted;
+            border-top-style: dashed;
+            
+            /* 3.把左、右、上、下複合在一起 */
+            border-left: 10px solid green;
+            border-right: 20px double gold;
+            border-top: 30px dotted red;
+            border-top: 40px dashed slateblue;
+
+            /* 整體的複合屬性 */
+            /* border: 40px dashed green; */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>你好啊</div>
+</body>
+</html>

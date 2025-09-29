@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11外邊距注意事項3_margin</title>
+    <style>
+       .id1 {
+            width: 400px;
+            height: 400px;
+            font-size: 30px;
+            background-color: skyblue;
+
+            margin: 50px;
+       }
+
+       .one {
+            background-color: yellowgreen;
+       }
+       .two {
+            background-color: gray;
+            margin-left: 20px;
+            margin-right: 40px;
+
+            /* 對於行内元素，上下margin設置是不完美的 或者是無效的 */
+            margin-top: 50px;
+            margin-bottom: 60px;
+       }
+       .three {
+            background-color: gold;
+       }
+    </style>
+
+</head>
+<body>
+   
+    <div class="id1">我是一個塊元素</div>
+    <div>我是一段文字</div>
+    <hr>
+    <span class="one">人之初</span><span class="two">性本善</span><span class="three">習相近</span>
+</body>
+</html>

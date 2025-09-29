@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16margin_塌陷問題</title>
+    <!-- 塌陷問題 ：第一個子元素的上margin會作用在父元素上
+     最後一個子元素的下margin會作用在父元素上
+    -->
+    <style>
+        .outer {
+            width: 400px;
+            /* height: 400px; */
+            background-color: gray;
+            /* 解決塌陷問題的3種方式 */
+            /* 1.給父元素設置不爲0的padding */
+            /* padding: 1px; */
+
+            /* 2.給父元素設置寬度不爲0的border */
+            /* border: 1px solid red; */
+
+            /* 3.給父元素設置CSS樣式的 */
+            overflow:hidden
+        }
+
+        .inner1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+
+            /* 下面這行代碼是有問題的 */
+            margin-top: 50px;
+        }
+        .inner2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* 下面這行代碼是有問題的 */
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner1">inner1</div>
+        <div class="inner2">inner2</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12外邊距注意事項4_margin</title>
+    <style>
+       .id1 {
+          width: 400px;
+          height: 400px;
+          font-size: 30px;
+          background-color: skyblue;
+          
+          /*對於塊級元素 auto:離指定位置能有多遠，就多遠。
+          左右同時設置，就是在其父元素内 水平居中
+          上下是不行的。
+          */
+          margin-right: auto;
+          margin-left: auto;
+       }
+
+    </style>
+
+</head>
+<body>
+   
+    <div class="id1">我是一個塊元素</div>
+    <div>我是一段文字</div>
+</body>
+</html>

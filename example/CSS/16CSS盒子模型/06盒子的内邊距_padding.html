@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06盒子的内邊距_padding</title>
+    <style>
+        #id1 {
+            background-color: skyblue;
+            font-size: 40px;
+            height: 400px;
+            width: 400px;
+            /* 左側内邊距 */
+            padding-left: 20px;
+            /* 上内邊距 */
+            padding-top: 30px;
+            /* 下内邊距 */
+            padding-bottom: 40px;
+            /* 右側内邊距 */
+            padding-right: 20px;
+
+            /* 1.複合屬性,一個值。
+            含義：四個方向的内邊距是一樣的
+            */
+            padding: 20px;
+
+            /* 2.符合屬性，兩個值
+            含義：上下、左右
+            */
+             padding: 30px 30px;
+
+            /*3.符合屬性，兩個值
+            含義：上、左右、下
+            */
+             padding:10px 20px 30px;
+
+            /*4.符合屬性，兩個值
+            含義：上、右、下、左 （順時針）
+            */
+             padding: 10px 20px 30px 40px;
+
+        }
+
+        /* 對於行内元素，左右padding是正常的，但是上下padding不正常 */
+        #id2 {
+            background-color: gold;
+            font-size: 20px;
+            padding-left: 20px;
+            padding-right: 30px;
+            /* 上下内邊距是不能完美的設置的 */
+            padding-top: 50px;
+            padding-bottom: 40px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="id1">你好啊</div>
+    <hr>
+    <span id="id2">我很好</span><span>,你呢？</span>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti rem excepturi minus id deleniti veritatis nemo iure error obcaecati. Nulla perspiciatis at nisi impedit officia neque adipisci distinctio ipsa alias!</div>
+</body>
+</html>

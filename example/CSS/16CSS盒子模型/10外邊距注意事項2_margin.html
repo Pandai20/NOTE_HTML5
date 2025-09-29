@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10外邊距注意事項2_margin</title>
+    <style>
+        .id {
+            width: 100px;
+            height: 100px;
+        }
+        .id1 {
+            background-color: gray;
+
+        }
+        .id2 {
+            background-color: orange;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .id3 {
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 上\左 margin會影響自己的位置
+    下\右margin 會影響兄弟元素的位置
+    -->
+    <div class="id id1">1</div>
+    <div class="id id2">2</div>
+    <div class="id id3">3</div>
+</body>
+</html>
