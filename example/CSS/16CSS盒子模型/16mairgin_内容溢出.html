@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15mairgin_合并問題</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            background-color: skyblue;
+            margin-bottom: 50px;
+            /* 1.使用overflow處理溢出
+            hidden ：隱藏溢出的部分
+            visible :顯示（默認值）
+            scroll :滾動條
+            auto ：自動顯示滾動條、内容不溢出不顯示
+            */
+            overflow: auto;
+
+            /* 2.使用overflow-x/overflow-y 
+            設置橫向或者縱向的，不太建議
+             */
+        }
+
+        .id1 {
+            background-color: orange;
+            width: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eligendi
+        tempore laborum quia earum?<div class="id1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam autem voluptatem atque nulla, excepturi aliquam minus iusto ipsum magnam aliquid deserunt. Minima repellat rem id sapiente quo provident rerum maxime officiis totam blanditiis est aspernatur voluptates odio temporibus quaerat, perferendis, dolor corrupti voluptatibus neque quae nisi? Voluptates dignissimos esse reiciendis!</div> Hic assumenda numquam omnis aperiam! Vel,
+        laborum? Ad, quod ab. Delectus dolor sed quibusdam saepe corrupti?
+    </div>
+</body>
+
+</html>

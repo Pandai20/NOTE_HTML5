@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17隱藏元素的兩種方式</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .box1 {
+            background-color: gray;
+            /* 1.display none將元素隱藏，但是不會佔位 */
+            /* display:none; */
+
+            /*visibility hidden 將元素隱藏，但是會佔位*/
+            visibility: hidden;
+        }
+
+        .box2 {
+            background-color: skyblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+
+</body>
+</html>

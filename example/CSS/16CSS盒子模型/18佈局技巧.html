@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18佈局技巧</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            overflow:hidden;
+        }
+        .outer1 {
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+            margin: 150px auto;
+            /* 文本居中 */
+            text-align: center;
+        }
+
+        .inner {
+            /* 垂直居中 */
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="outer1">
+            <span class="inner">inner</span>
+        </div>
+    </div>
+</body>
+</html>
