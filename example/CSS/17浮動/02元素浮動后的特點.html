@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02元素浮動后的特點</title>
+    <style>
+        .outer {
+            width: 800px;
+            height: 400px;
+            background-color: gray;
+            padding:10px;
+        }
+        .box {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .box1 {
+            background-color: green;
+        }
+        .box2 {
+            background-color: yellow;
+            /* 設置元素浮動 */
+            float: left;
+        }
+        .box3 {
+            background-color: orange;
+        }
+
+        /*元素浮動后的特點： 
+        1.脫離文檔流
+        2.不管浮動之前是什麽元素，浮動后：默認寬和高都是被内容
+          撐開（盡可能小），而且可以設置寬高。
+        3.不會獨占一行，可以與其他元素共用一行。
+        4.不會margin合并，越不會margin塌陷，能夠完美的設置
+            四個方向的margin和padding
+        5.不會像行内塊一樣被當作文本處理（沒有空白行的問題）
+        
+        
+        
+        
+        
+        */
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">盒子1</div>
+        <div class="box box2">盒子2</div>
+        <div class="box box3">盒子3</div>
+    </div>
+    
+</body>
+</html>
