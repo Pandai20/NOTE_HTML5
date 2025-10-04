@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19元素之間空白問題</title>
+
+    <style>
+        .id1 {
+            background-color: gray;
+        }
+        .id2 {
+            background-color: green;
+        }
+        .id3 {
+            background-color: yellowgreen;
+        }
+
+        /* 第二種解決方案 */
+        div {
+            font-size: 0;
+        }
+        span{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 行内、行内塊元素之間的空隙 -->
+    <span class="id1">我</span>
+    <span class="id2">喜歡</span>
+    <span class="id3">學習</span>
+    <hr>
+    <!-- 1.第一種解決方案：不要留回車 -->
+    <span class="id1">我</span><span class="id2">喜歡</span><span class="id3">學習</span>
+    <!-- 2.第二種方案：
+    給父元素的設置font-size:0,再給給需要顯示文字的元素，
+    單獨設置字體大小（推薦）
+    -->
+    <hr>
+    <div>
+        <span class="id1">我</span>
+        <span class="id2">喜歡</span>
+        <span class="id3">學習</span>
+    </div>
+</body>
+</html>

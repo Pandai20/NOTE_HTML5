@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20行内塊幽靈空白問題</title>
+    <style>
+        /* 幽靈空白 :就是行内塊元素是于文本的基綫對齊的，
+        而文本的基綫與文本最底端之間是有一點距離的。
+        */
+        div {
+            width: 400px;
+            background-color: skyblue;
+            
+            /* 3.方案三: 给父元素设置 font-size:0。
+            如果该行内块内部还有文本，则需单独设置 font-size 。 */
+            font-size:0
+        }
+        img {
+            height: 100px;
+            
+            /*1.方案一:给行行内块设置 vertical ，
+            值不为 baseline 即可，
+            设置为 middel、bottom、top 均可。  */
+            /* vertical-align: bottom; */
+
+            /* 2.方案二: 若父元素中只有一张图片，
+            设置图片为 display:block。 */
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../../000.jpg" alt="">
+    </div>
+</body>
+</html>
