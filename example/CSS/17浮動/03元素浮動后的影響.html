@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03元素浮動后的影響</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: gray;
+            /* border 解決塌陷問題 */
+            border: 1px black solid;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            font-size: 20px;
+            background-color: skyblue;
+            margin: 10px;
+        }
+
+        .box1,.box2,.box3 {
+            float: left;
+        }
+        /* 浮動后會產生的影響
+        1.對兄弟元素的影響：後面的兄弟元素（盒子4），會占據
+            浮動元素之前的位置（在盒子1後面了），在浮動元素的下面；
+            對前面的兄弟無影響
+
+        2.對父元素的影響：（這個時候沒有盒子4）
+            不能撐起父元素的高度坍塌；但是父元素的寬度依然束縛浮動的元素。
+        */
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">盒子1</div>
+        <div class="box box2">盒子2</div>
+        <div class="box box3">盒子3</div>
+        <!-- <div class="box box4">盒子4</div> -->
+    </div>
+    
+    <!-- <div style="background-color: orange;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae error facilis facere perspiciatis? Reiciendis quisquam facere aspernatur asperiores neque recusandae consequuntur similique, nesciunt nobis ad a voluptatum perferendis ea quis obcaecati accusamus provident omnis eius vel corrupti. Nobis rerum illo voluptatem fuga molestias, et veniam dolore! Laudantium sapiente ab hic totam! Eum suscipit optio maiores ipsam dolorem tenetur. Adipisci itaque praesentium illo modi quas quidem ea aliquid, eius laborum distinctio impedit enim non error mollitia sit similique excepturi voluptas possimus reiciendis ullam maxime asperiores facere aperiam. Ducimus magni eum accusantium, facilis at ipsum necessitatibus. Dignissimos possimus nesciunt fuga mollitia quos?</div> -->
+
+</body>
+</html>

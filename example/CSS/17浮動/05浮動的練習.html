@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮動的練習</title>
+    <style>
+        body {
+            width: 960px;
+            float: left;
+        }
+        .box1,.box2,.box3 {
+            background-color: gray;
+            float: left;
+            height: 80px;
+            width: 200px;
+            line-height: 80px;
+            text-align: center;
+            margin-bottom: 10px;
+            
+        }
+       
+       .box2 {
+            width: 540px;
+            margin: 0 10px;
+       }
+
+       .menu {
+            width: 960px;
+            height: 30px;
+            background-color: gray;
+            float: left;
+            line-height: 30px;
+            text-align: center;
+            margin-bottom: 10px;
+       }
+
+       .left_content {
+            width: 760px;
+            height: 410px;
+            float:left;
+       }
+       .column1,.column2 {
+            width: 368px;
+            height: 198px;
+            border: 1px black solid;
+            float:left;
+            margin-bottom: 10px;
+       }
+
+       .column2{
+            margin: 0 0 0 10px;
+       }
+
+       .innter_top {
+            width: 760px;
+            height: 210px;
+            float:left;
+       }
+
+       /* .innter_top::after {
+            content: "";
+            display: block;
+            clear: both;
+       } */
+
+       
+       .column3,.column4,.column5,.column6 {
+            width: 178px;
+            height: 198px;
+            border: 1px black solid;
+            letter-spacing: 0px;
+            word-spacing: 0px;
+
+            float: left;
+       }
+
+       .column2,.column4,.column6 {
+            margin: 0 10px;
+       }
+
+       .right_content {
+            width: 200px;
+            float: right;
+       }
+
+       .column7,.column8,.column9 {
+            width: 198px;
+            height: 128px;
+            float: right;
+            border: 1px black solid;
+       }
+       .column8 {
+            margin: 10px 0;
+       }
+
+       .column1,
+       .column2,
+       .column3,
+       .column4,
+       .column5,
+       .column6 {
+            text-align: center;
+            line-height: 100px;
+
+       }
+       .column7,
+       .column8,
+       .column9 {
+            text-align: center;
+            line-height: 65px;
+       }
+
+
+    </style>
+</head>
+<body>
+    <div class="outbox">
+        <div class="box1">logo1</div>
+        <div class="box2">banner1</div>
+        <div class="box3">banner2</div>
+    </div>
+    <div class="menu">菜單</div>
+
+    <div>
+        <div class="left_content">
+            <div class="innter_top">
+                <div class="column1">欄目一</div>
+                <div class="column2">欄目二</div>
+            </div>
+
+            <div class="innter_bottom">
+                <div class="column3">欄目三</div>
+                <div class="column4">欄目四</div>
+                <div class="column5">欄目五</div>
+                <div class="column6">欄目六</div>
+            </div>
+        </div>
+
+        <div class="right_content">
+            <div class="column7">欄目七</div>
+            <div class="column8">欄目八</div>
+            <div class="column9">欄目九</div>
+        </div>
+    </div>
+</body>
+</html>

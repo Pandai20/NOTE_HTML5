@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮動的練習_參考視頻的版本</title>
+    <style>
+     /* 初始化各個元素的默認樣式 */
+        * {
+          margin: 0;
+          padding: 0;
+        }
+
+        .leffix {
+          float: left;
+        }
+
+        .rightfix {
+          float: right;
+        }
+        /* 清楚浮動帶來的影響，這個時候只需要父元素設置該類名 */
+        .clearfix::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+
+        /* 當前整個頁面 */
+        .container {
+          width: 960px;
+          /* 頁面居中 */
+          margin: 0 auto;
+          /* 暫時給幫助觀察 */
+          background-color: skyblue;
+          /* 設置文字居中，text-*是具有繼承屬性的，
+          因此，在子元素中文字是擁有這個劇中的屬性。
+          */
+          text-align: center;
+        }
+
+        .logo {
+          width: 200px;
+        }
+        .banner1 {
+          width: 540px;
+          margin: 0 10px;
+        }
+        .banner2 {
+          width: 200px;
+        }
+
+        .logo,.banner1,.banner2 {
+          height: 80px;
+          background-color: #ccc;
+        }
+
+        /* 1.這裏會有浮動的影響，因爲上面的頭部元素是浮動的。
+        因此浮動元素的 父親 得消除這個影響 */
+        .menu {
+          margin-top: 10px;
+          height: 30px;
+          background-color: #ccc;
+        }
+
+        .item1,.item2{
+          width: 368px;
+          height: 198px;
+          border: 1px solid black;
+          margin-right: 10px;
+
+          line-height: 198px;
+        }
+        .contant {
+          margin-top: 10px;
+        }
+
+        .item3,.item4,.item5,.item6 {
+          width: 178px;
+          height: 198px;
+          border: 1px solid black;
+          margin-right: 10px;
+
+          line-height: 198px;
+        }
+        .bottom {
+          margin-top: 10px;
+          
+        }
+
+        .item7,.item8,.item9 {
+          width: 198px;
+          height: 128px;
+          border: 1px solid black;
+        }
+
+        .item8 {
+          margin: 10px 0;
+        }
+
+        .footer {
+          height: 60px;
+          background-color: #ccc;
+          margin-top: 10px;
+          line-height: 60px;
+        }
+        
+    </style>
+</head>
+<body>
+     
+       <div class="container clearfix">
+          <!-- 頭部 -->
+          <!-- 父元素設置clearfix，消除浮動產生的影響 -->
+          <div class="page-header clearfix">
+              <div class="logo leffix">logo</div>
+              <div class="banner1 leffix">banner1</div>
+              <div class="banner2 leffix">banner1</div>
+          </div>
+          <!--菜單-->
+          <div class="menu">菜單</div>
+          <!-- 内容區 -->
+          <div class="contant clearfix">
+               <!-- 兩個内容塊得浮動 -->
+               <div class="left leffix">
+                    <!-- 上 -->
+                    <div class="top clearfix">
+                         <div class="item1 leffix">欄目1</div>
+                         <div class="item2 leffix">欄目2</div>
+                    </div>
+                    <!-- 下 -->
+                    <div class="bottom clearfix">
+                         <div class="item3 leffix">欄目3</div>
+                         <div class="item4 leffix">欄目4</div>
+                         <div class="item5 leffix">欄目5</div>
+                         <div class="item6 leffix">欄目6</div>
+                         
+                    </div>
+
+               </div>
+
+               <!-- 右邊 -->
+               <div class="right rightfix">
+                    <div class="item7 ">欄目7</div>
+                    <div class="item8 ">欄目8</div>
+                    <div class="item9 ">欄目9</div>
+               </div>
+
+          </div>
+
+          <!-- 頁脚 -->
+
+          <div class="footer">頁脚</div>
+
+       </div>
+</body>
+</html>
