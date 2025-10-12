@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07定位的特殊應用</title>
+    <style>
+        .content {
+            background-color: skyblue;
+            height: 200px;
+            text-indent: 20px;
+        }
+        p {
+             text-indent: 30px;
+        }
+
+        .outer {
+            height: 400px;
+            background-color: skyblue;
+            position: relative;
+        }
+        .inner {
+            background-color: gray;
+            font-size: 20px;
+            padding: 20px;
+            border: 10px solid black;
+
+            position: absolute;
+            /* 1.快寬想與包含塊一致，設置 */
+            /* left: 0;
+            right: 0; */
+
+            /* 2.高度想和包含塊一致，設置*/
+            /* top: 0;
+            bottom: 0; */
+
+            /* 3.讓定位元素在其中劇中：設置*/
+            width: 400px;
+            height: 100px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        注意:
+        <p>1.发生"固定定位"、"绝对定位"后元素都变成了定位元素，默认宽高被内容撑开，且依然可以设置宽高。</p>
+        <p>2.發生相對定位以後，元素依然是之前的顯示模式</p>
+        <p>3.以下所说的特殊应用，只针对 "绝对定位" 和 "固定定位" 的元素，不包括相对定位的元素。</p>
+    </div>
+    <hr>
+    <span>讓元素定位元素的寬充滿包含塊：</span>
+    <hr>
+
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+</body>
+</html>

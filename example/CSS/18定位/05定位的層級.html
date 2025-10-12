@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05定位的層級</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+
+        .outer {
+            width: 800px;
+            background-color: skyblue;
+            border: 1px solid black;
+            /* 頁面居中 */
+            /* margin: 0 auto; */
+
+            /* 設置絕對定位的 包含塊 */
+            position: relative;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            /* margin: 0 10px; */
+            font-size: 20px;
+            line-height: 50px;
+            text-align: center;
+        }
+        .box1 {
+            background-color: gray;
+        }
+        .box2 {
+            background-color: green;
+            /* 相對定位 */
+            position: relative;
+            top: -80px;
+            left: 30px;
+        }
+        .box3 {
+            background-color: orange;
+            /* 絕對定位 */
+            position: absolute;
+            top: 70px;
+            left: 60px;
+            /* z-index: 2; */
+        }
+        .box4 {
+            background-color: pink;
+            /* 固定定位 */
+            position: fixed;
+            top: 115px;
+            left: 100px;
+
+        }
+
+        /* 定位層級 
+        1.定位層級比普通元素高
+        2.如果發生重叠，後面的元素，會顯示在前面元素之上
+        3.可以通過css屬性z-index 調整元素的顯示層級
+            z-index是數值，沒有單位
+        4.只有定位元素才能設置z-index
+        5.如果定位z-index的元素值大，但是沒有覆蓋z-index值小的元素，
+        那麽請檢查包含塊的層級。
+        
+        */
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+    </div>
+</body>
+</html>

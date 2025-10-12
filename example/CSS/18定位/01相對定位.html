@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01相對定位</title>
+    <!-- 相對定位: 相對於原來的位置
+    -->
+    <style>
+        .outer {
+            width: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .box1 {
+            background-color: orange;
+        }
+        .box2 {
+            background-color: gray;
+            /* 設置相對定位 
+            注意:不推薦同時設置 定位 和 "浮動"
+            */
+            position: relative;
+
+            /* 設置"距離"left 20像素 
+            注意:不能同時設置left和right
+            */
+            left: 20px;
+
+            /* 設置距離" 下 20px 
+            注意:不能同時設置bottom和top
+            */
+            bottom: 20px;
+        }
+
+        /* 特點: 1.不會脫離文檔流,元素的位置變化,只是視覺效果上的變化
+        不會對其他元素產生任何影響.
+        2.定位元素的顯示的層級要比普通元素高,無論什麽定位,顯示層級都是一樣的.
+            ①定位元素會蓋在普通元素之上
+            ②都發生定位的兩個元素,后寫的元素會蓋在先寫的元素之上
+        */
+        .box3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+    </div>
+</body>
+</html>

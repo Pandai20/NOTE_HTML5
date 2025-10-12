@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06定位可以越過padding</title>
+    <style>
+        .outer {
+            background-color: #ccc;
+            width: 800px;
+            height: 600px;
+            padding: 50px;
+
+            /* 設置父元素為絕對定位的包含塊 */
+            position: relative;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">1</div>
+        <br>
+        <br>
+        <span>這裏我設置了50px的padding,説明定位可以越過padding</span>
+    </div>
+</body>
+</html>

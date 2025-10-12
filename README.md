@@ -2,38 +2,15 @@
 
 ## 介绍
 
-:sparkles:尚硅谷Web前端*HTML5 CSS3*初学者零基础入门全套完整版学习笔记
+:sparkles:Web前端*HTML5 CSS3*初学者零基础入门筆記
+
+該項目forked于 git@github.com:vectorxxxx/NOTE_HTML5.git。旨在學習html、CSS。
 
 
 
 ## 更新
 
-- 语雀:link:：[Web前端HTML5&CSS3 · 语雀 (yuque.com)](https://www.yuque.com/u21195183/hfcamg)
-- Github:link:：[vectorxxxx/NOTE_HTML5: 尚硅谷Web前端HTML5 CSS3初学者零基础入门全套完整版学习笔记 (github.com)](https://github.com/vectorxxxx/NOTE_HTML5)
-- Gitee:link:：[NOTE_HTML5: 尚硅谷Web前端HTML5 CSS3初学者零基础入门全套完整版学习笔记 (gitee.com)](https://gitee.com/vectorx/note_html5)
-- CC:link:：[VectorUx / NOTE_HTML5 · CODE CHINA (csdn.net)](https://codechina.csdn.net/qq_35925558/note_html5)
-
-:sparkles:看文档推荐使用**语雀**，感觉更加简洁；需要图片资源的推荐下面几个代码托管平台，都是同步更新的哦！
-
-:sparkles:同时，为了更方便大家在托管平台上直接看，特意整理了一下结构（因为默认只有README文件会有目录结构，所以每节单独放到了一个文件夹下面）
-
-:sparkles:其他平台因为审核限制的原因，内容上应该没有上面几个全，大家可以自行选择
-
-- 博客园:link:：[Web前端HTML5&CSS3 - 随笔分类 - VectorX - 博客园 (cnblogs.com)](https://www.cnblogs.com/vectorx/category/1975212.html)
-- CSDN:link:：[Web前端_VectorX's Blog-CSDN博客](https://blog.csdn.net/qq_35925558/category_11061834.html)
-- 掘金:link:：[VectorX 的个人主页 - 文章 (juejin.cn)](https://juejin.cn/user/1794840859509070/posts)
-
-:sparkles:另外，新搭建了一个*Github Pages*网站，大家可以去尝尝鲜~
-
-- 我的博客:link:：[标签 | VectorX (vectorxxxx.github.io)](https://vectorxxxx.github.io/tags/#15-html5css3)
-
-<mark>**整理不易，还望各位看官一键三连 :heart: :heart: :heart: **</mark>
-
-<mark>**整理不易，还望各位看官一键三连 :heart: :heart: :heart: **</mark>
-
-<mark>**整理不易，还望各位看官一键三连 :heart: :heart: :heart: **</mark>
-
-:sparkles:下面开始吧~
+- example目錄中是本人參考視頻學習的練習demo，内部有詳細注釋。
 
 
 
