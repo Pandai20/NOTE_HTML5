@@ -2,23 +2,23 @@
 
 ## 介绍
 
-:sparkles:Web前端*HTML5 CSS3*初学者零基础入门筆記
+​	:sparkles:Web前端*HTML5 CSS3*初学者零基础入门筆記
 
-該項目forked于 git@github.com:vectorxxxx/NOTE_HTML5.git。旨在學習html、CSS。
+​	該項目forked于 NOTE_HTML5。在其基礎上進行前端編程的學習，後續項目將不會編寫md閲讀文檔，而是直接在觀看視頻的同時
 
+在src中進行注釋。
 
-
-## 更新
-
-- example目錄中是本人參考視頻學習的練習demo，内部有詳細注釋。
-
-
-
----
-
+	src─|
+	    ├── CSS 
+	    ├── html
+	    │   └── H5
+	    ├── image
+	    └── path_test
 
 
-:sparkles:目前，因为本人是*边学边更*的，目前还没有学习完毕，所以暂时只整理了这些
+
+
+
 
 
 
