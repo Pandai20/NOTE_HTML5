@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02css3新增的box-sizing</title>
+    <style>
+        .box1 {
+            /* 標準盒模型 */
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* padding和border的值往外擴張的 */
+            padding: 5px;
+            border: 5px solid black;
+            /* 默認就是content-box */
+            box-sizing: content-box;
+        }
+        .box2 {
+            /* 怪異盒模型 */
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            padding: 5px;
+            border: 5px solid black;
+            /* 整個盒子的大小就是width*height */
+            box-sizing: border-box;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <br>
+    <div class="box2"></div>
+</body>
+</html>

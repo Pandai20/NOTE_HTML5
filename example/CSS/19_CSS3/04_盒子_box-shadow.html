@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_box-shadow</title>
+    <!-- 盒子陰影：h-shadow v-shadow blur spread color inset-->
+    <style>
+        /* h-shadow v-shadow :水平垂直陰影位置，可以為負值
+        blur：模糊程度/模糊距離
+        spared：陰影外延值
+        color: 陰影顔色
+        inset： 將外陰影改爲内陰影
+        */
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: orange;
+            margin: 0 auto;
+            margin-top: 100px;
+            font-size: 40px;
+
+            /* 1.兩個值：水平、垂直位置 */
+            /* box-shadow: 10px 10px; */
+
+            /* 2.三個值：水平、垂直位置、顔色 */
+            /* box-shadow: 10px 10px gray; */
+
+            /* 3.三個值：水平、垂直位置、模糊值 */
+            /* 模糊值: 控制陰影的"濃度"，越大越淡 */
+            /* box-shadow: 10px 10px 10px; */
+
+            /* 4.四個值：水平、垂直位置、模糊值、顔色 --常用記憶*/
+            /* box-shadow: 10px 10px 10px green; */
+
+            /* 5.五個值：水平、垂直位置、模糊值、外延值、顔色*/
+            /* 外延值 : 向外擴展，陰影的距離 */
+            /* box-shadow: 10px 10px 10px 10px green; */
+
+
+            /* 6.五個值：水平、垂直位置、模糊值、外延值、顔色、内陰影*/
+            /* 内陰影: 將陰影設置在内部 */
+            box-shadow: 10px 10px 10px 10px green inset;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        你好啊
+    </div>
+</body>
+</html>

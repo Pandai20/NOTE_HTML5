@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_背景_多背景</title>
+    <style>
+
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            margin: 0 auto;
+            font-size: 40px;
+            padding: 1px;
+            border: 1px dashed black;
+
+            background: url(../../dahuangmao-09.png) ,
+                        url(../../dahuangmao-09.png) right top,
+                        url(../../dahuangmao-09.png) left bottom,
+                        url(../../dahuangmao-09.png) right bottom;
+            background-repeat: no-repeat;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">你好啊</div>
+</body>
+</html>

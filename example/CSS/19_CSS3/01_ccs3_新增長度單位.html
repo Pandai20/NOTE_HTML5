@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_ccs3_新增長度單位</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+        .box2 {
+            /*50vw :視口寬的50%  */
+            width: 50vw;
+            height: 200px;
+            background-color: skyblue;
+        }
+        .box3 {
+            /*50vw :視口高的50%  */
+            width: 200px;
+            height: 50vh;
+            background-color: skyblue;
+        }
+        /* vmax /vmin : 就是選擇寬和高 的最大/最小的 */
+    </style>
+</head>
+<body>
+    <div class="box1">box采用px爲單位</div>
+    <br>
+    <!-- viewport width視口寬度 -->
+    <div class="box2">box采用vw</div>
+    <br>
+    <div class="box3">box采用px爲單位</div>
+</body>
+</html>

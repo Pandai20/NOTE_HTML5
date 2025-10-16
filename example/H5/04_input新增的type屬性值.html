@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_input新增的type屬性值</title>
+</head>
+<body>
+    <!--form中新增 novalidate  不做輸入校驗 -->
+    <form action="" >
+        <!--1.name是表單提交以後生成的鍵值對中的key -->
+        <!-- 郵箱：<input type="email" name="email" required> -->
+
+        <!--2.url:可以識別輸入的是不是網址 -->
+        <!-- url: <input type="url" name="url" required> -->
+
+        <!--3.number 携帶上下左右的數值按鈕 
+        step : 設置上升的間隔 
+        max="80" min="10" : 設置最大值 最小值
+        -->
+        <!-- 數值： <input type="number" name="number" step="2" max="80" min="10"> -->
+
+        <!-- 4.search搜索  就是後面有個X,可以全部清空-->
+        <!-- 搜索：<input type="search" name="keyweord" required> -->
+
+        <!-- 5.tel電話 當在手機上輸入的時候，這裏就會有一個數字鍵盤-->
+         <!-- 電話：<input type="tel" name="phone"> -->
+
+        <!-- 6.range範圍選擇器 value：默認值-->
+        <!-- 範圍：<input type="range" name="range" max="80" min="10" value="22"> -->
+
+        <!-- 7.顔色 -->
+         <!-- 顔色 <input type="color" name="color"> -->
+
+        <!-- 8.日期 -->
+        <!-- 日期 <input type="date" name="date" required> -->
+
+        <!-- 9.年月 -->
+        <!-- 年月 <input type="month" name="month" required> -->
+
+        <!-- 10.年周 -->
+        <!-- 年周 <input type="week" name="week" required> -->
+
+        <!-- 11.時間 -->
+        <!-- 時間 <input type="time" name="time" required> -->
+
+        <!-- 11.日期+時間 -->
+        日期+時間 <input type="datetime-local" name="datetime-local" required>
+
+         
+        <br>
+        <button>提交</button>
+    </form>
+
+</body>
+</html>

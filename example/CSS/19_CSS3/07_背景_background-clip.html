@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_背景_background-clip</title>
+    <style>
+
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            margin: 0 auto;
+            font-size: 40px;
+            padding: 50px;
+            border: 50px dashed rgba(0, 0, 0, 0.781);
+
+            background-image: url(../../000.jpg);
+            /* 背景裁切 ：設置指定地方以外的地方不可見 */
+            background-repeat: no-repeat;
+
+            /* 默認值 */
+            background-clip: border-box;
+            background-clip: padding-box;
+            background-clip: content-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">你好啊</div>
+</body>
+</html>

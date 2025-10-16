@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03表單相關的新增的屬性</title>
+</head>
+<body>
+    <form action="">
+        <!-- 新增
+         1.placeholder 占位的提示（用於文字輸入的）
+         2.required    未提交的提示符（必填的字段）
+         3.autofocus   自動獲取焦點,適用於所有
+         4.autocapitalize  自動完成on/off 在瀏覽器設置中->地址和其他信息->保存并自動填充地址  打開才能
+         5.pattern="\w{6}" 正則表達式（限制輸入類型的）  \w{6}：數字字母下劃綫必須到達六位
+         注意 ： pattern的前提是不能爲空，就是得有required  不然空也能提交
+         -->
+        賬號：<input 
+                type="text" 
+                name="account" 
+                placeholder="請輸入賬號" 
+                required 
+                autofocus 
+                autocapitalize="on"
+                pattern="\w{6}"
+              >
+        <br>
+        密碼：<input type="password" name="pwd" placeholder="請輸入密碼">
+        <br>
+        性別：
+            <!-- 單選 這個required，只需要挑一個選中 -->
+            <input type="radio" value="male" name="gender" required>男
+            <input type="radio" value="female" name="gender" >女
+        <br>
+        愛好：
+            <!-- checkbox 就是必須得勾選 -->
+            <input type="checkbox" value="smoke">抽烟
+            <input type="checkbox" value="drink">喝酒
+            <input type="checkbox" value="perm">燙頭
+        <br>
+        <!-- textarea中  pattern無法使用-->
+        其他：<textarea name="other" placeholder="請輸入其他" ></textarea>
+        <button>提交</button>
+    </form>
+
+</body>
+</html>

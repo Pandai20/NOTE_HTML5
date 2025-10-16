@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_盒子_resize</title>
+    <style>
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: orange;
+            /* 使用者能夠通過鼠標進行控制的，*/
+            /* horizontal :水平方向的 
+               vertical :垂直方向
+               both ：全部方向
+               none:不能調節
+            */
+            resize: vertical;
+            /* resize前提必須設置overflow */
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

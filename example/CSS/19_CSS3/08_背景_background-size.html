@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_背景_background-size</title>
+    <style>
+
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            font-size: 40px;
+            padding: 1px;
+            border: 1px solid black;
+
+            background-image: url(../../000.jpg);
+            background-repeat: no-repeat;
+
+            /* 等比例的縮放,全部放在容器裏面 */
+            background-size: contain;
+
+
+            /* 等比例的縮放,部分放在容器裏面,畫面可能完整 */
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
