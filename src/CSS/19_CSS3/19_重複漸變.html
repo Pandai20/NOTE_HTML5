@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19_重複漸變</title>
+
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            font-size: 20px;
+        }
+        .box1 {
+            background-image: repeating-linear-gradient(red 50px,yellow 100px,green 150px);
+        }
+      
+        .box2 {
+            /* 到50px是全紅  100px是全黃  150px是全綠  剩下的也是全錄 */
+            background-image: linear-gradient(red 50px,yellow 100px,green 150px);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box box1">重複漸變</div>
+    <div class="box box2">2</div>
+</body>
+</html>

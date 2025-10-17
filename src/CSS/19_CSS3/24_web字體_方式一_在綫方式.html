@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24_web字體_方式一在綫地址</title>
+    <!-- 在ww.iconfont.cn中下載指定的字體圖標放入iconfont_cn文件夾中-->
+    <style>
+        /* 方式一：使用的是在綫地址*/
+       @font-face {
+            font-family: 'iconfont';  /* Project id 5043074 */
+            src: url('//at.alicdn.com/t/c/font_5043074_64tlrgyaq3q.woff2?t=1760680561341') format('woff2'),
+            url('//at.alicdn.com/t/c/font_5043074_64tlrgyaq3q.woff?t=1760680561341') format('woff'),
+            url('//at.alicdn.com/t/c/font_5043074_64tlrgyaq3q.ttf?t=1760680561341') format('truetype');
+        }
+        .iconfont {
+            /*  !important 此声明将覆盖任何其他声明 */
+            font-family: "iconfont" !important;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <span class="iconfont">&#xe6c7;</span>
+    <span class="iconfont">&#xe6c8;</span>
+    <span class="iconfont">&#xe6c9;</span>
+    <span class="iconfont">&#xe6ca;</span>
+</body>
+</html>

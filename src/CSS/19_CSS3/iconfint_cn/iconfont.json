@@ -1,0 +1,37 @@
+{
+  "id": "5043074",
+  "name": "隨便的項目",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "45246993",
+      "name": "冰糕",
+      "font_class": "binggao",
+      "unicode": "e6c7",
+      "unicode_decimal": 59079
+    },
+    {
+      "icon_id": "45246997",
+      "name": "巧克力",
+      "font_class": "qiaokeli",
+      "unicode": "e6c8",
+      "unicode_decimal": 59080
+    },
+    {
+      "icon_id": "45247001",
+      "name": "热狗",
+      "font_class": "regou",
+      "unicode": "e6c9",
+      "unicode_decimal": 59081
+    },
+    {
+      "icon_id": "45247006",
+      "name": "咖啡",
+      "font_class": "kafei",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    }
+  ]
+}

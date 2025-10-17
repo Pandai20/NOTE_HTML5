@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_邊框_邊框外輪廓</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 4px solid black;
+            margin-top: 100px;
+
+            /* 邊框設置外輪廓 外輪廓是不計算在盒子的 */
+            outline-width: 10px;
+            outline-color: orange;
+            outline-style: solid;
+
+            /* 設置外輪廓與邊框的距離  正負值都可以 是一個獨立的屬性 */
+            outline-offset: 10px;
+
+            /* 複合屬性 */
+            outline: 20px green solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

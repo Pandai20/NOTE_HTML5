@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21_web字體_方式一</title>
+    <!-- 在ww.iconfont.cn中下載指定的字體圖標放入iconfont_cn文件夾中-->
+    <style>
+        /* 方式一：使用Unicode 引用*/
+        @font-face {
+            font-family: 'iconfont';
+            src: url('./iconfint_cn/iconfont.woff2?t=1760679530315') format('woff2'),
+            url('./iconfint_cn/iconfont.woff?t=1760679530315') format('woff'),
+            url('./iconfint_cn/iconfont.ttf?t=1760679530315') format('truetype');
+        }
+        .iconfont {
+            /*  !important 此声明将覆盖任何其他声明 */
+            font-family: "iconfont" !important;
+
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <span class="iconfont">&#xe6c7;</span>
+    <span class="iconfont">&#xe6c8;</span>
+    <span class="iconfont">&#xe6c9;</span>
+    <span class="iconfont">&#xe6ca;</span>
+</body>
+</html>

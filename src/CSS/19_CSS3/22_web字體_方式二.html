@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22_web字體_方式二</title>
+    <!-- font-class 引用 可以讓我們知道圖標名稱 icon-binggao -->
+    <link rel="stylesheet" href="./iconfint_cn/iconfont.css">
+    <style>
+        /*  這種方式無效：因爲類選擇器 》元素選擇器 優先級       
+        span {
+            font-size: 100px;
+        } */
+
+
+        .iconfont {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <span class="iconfont icon-binggao"></span>
+    <span class="iconfont icon-qiaokeli"></span>
+    <span class="iconfont icon-regou"></span>
+    <span class="iconfont icon-kafei"></span>
+</body>
+</html>

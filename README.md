@@ -2,18 +2,16 @@
 
 ## 介绍
 
-​	:sparkles:Web前端*HTML5 CSS3*初学者零基础入门筆記
+​	該項目forked于 NOTE_HTML5。在其基礎上進行前端編程的學習，後續項目將不會編寫md閲讀文檔，而是直接在觀看視頻的同時，在src中進行注釋。
 
-​	該項目forked于 NOTE_HTML5。在其基礎上進行前端編程的學習，後續項目將不會編寫md閲讀文檔，而是直接在觀看視頻的同時
-
-在src中進行注釋。
-
-	src─|
-	    ├── CSS 
-	    ├── html
-	    │   └── H5
-	    ├── image
-	    └── path_test
+```c++
+src─|
+    ├── CSS 
+    ├── html
+    │   └── H5
+    ├── image
+    └── path_test
+```
 
 
 

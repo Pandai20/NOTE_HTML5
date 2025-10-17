@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15_文本_溢出</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        ul {
+            width: 400px;
+            height: 400px;
+            font-size: 20px;
+            border: 1px solid black;
+            /* 不使用列表樣式 */
+            list-style: none;
+
+        }
+        li {
+            margin-bottom: 10px;
+            /* 設置不換行 */
+            white-space: nowrap;
+            /* 多餘的變成... */
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            /* 注意:要使得 text-overflow 属性生效，
+            块容器必须显式定义 overflow 为非 visible 值，
+            white-space为nowrap 值。 */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>湖北一网友国庆期间出门几天，家里木地板长出蘑菇，专家：学名灰盖拟鬼伞，是可食用菌</li>
+        <li>深泽安平交界处，滹沱河绿道尽头</li>
+        <li>醉汉迷路走进派出所求助 民警一查竟是逃犯</li>
+        <li>第二十届湖北省中老年人才艺大赛优秀作品展举行</li>
+        <li>河南巩义黄河滩上可以免费捡花生？当地居民：最近雨天较多帮主家抢收花生，又拔又摘可五五分成</li>
+        <li>据了解，饶某某进入的是未经开发的野山区域，地势险峻，沿途多悬崖峭壁。饶某某失联后，当地组织了大规模的搜救行动，蓝天、神鹰、飞鹰、星火等多支救援队冒雨参与救援。</li>
+    </ul>
+</body>
+</html>

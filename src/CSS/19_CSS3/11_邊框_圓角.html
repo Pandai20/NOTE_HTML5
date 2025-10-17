@@ -9,10 +9,23 @@
             width: 200px;
             height: 200px;
             margin: 0 auto;
-            border: 1px solid black;
+            border: 4px solid black;
 
-            /* 設置圓角 */
-            
+            /* 設置圓角 這兩種都是常常寫的 */
+            /* 1.像素值的寫法 */
+            /* border-radius: 20px; */
+            /* 2.一般10-20 百分比 */
+            /* border-radius: 10%; */
+
+
+
+            /* 3.單獨寫某個邊的 */
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 20px;
+
+
+            /* 4.可以設置橢圓  就是設置兩個半徑x,y的px */
+            border-top-left-radius: 100px 20px;
         }
     </style>
 </head>
