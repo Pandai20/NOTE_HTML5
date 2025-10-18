@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31_2D_多重變化</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 0 auto;
+            margin-top: 80px;
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* 位移  縮放 */
+            /* transform: translate(100px,100px) scale(0.5); */
+
+            /* 如果 是  縮放 +位移  這裏原點還是父元素的左上角，
+            也就是得按照原點來計算位移的位置
+            */
+
+             transform: scale(0.5) translate(100px,100px) ;
+
+            /* 如果 旋轉+ 位移 
+            元素旋轉以後，x,y的坐標方向也旋轉了，而且元素的中心點是按照旋轉之前的固定的
+            也就是說，以後旋轉了還是按照沒有位移之前的中心點，來進行旋轉的。
+
+            ** 所以  我們吧旋轉一般是放在最後寫，防止破壞整個結構
+            */
+
+        }  
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">你好啊</div>
+    </div>
+
+</body>
+</html>

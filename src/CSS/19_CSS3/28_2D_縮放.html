@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28_2D_縮放</title>
+    <!-- 一般情況下，頁面字體最小的12px，我們能夠通過縮放調整出更小的 -->
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 0 auto;
+            margin-top: 80px;
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* 縮放如果小於 0的話，兩邊是對調的 */
+            /* transform: scaleX(1.5); */
+            
+            /* Y方向的縮小 */
+            /* transform: scaleY(0.5); */
+
+            /* 兩個方向的 */
+            transform: scale(0.5,0.5);
+            transform: scale(0.5);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">你好啊</div>
+    </div>
+
+</body>
+</html>

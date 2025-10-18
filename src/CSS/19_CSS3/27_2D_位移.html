@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27_2D_位移</title>
+    <!-- 瀏覽器相對於定位來説  位移效率更高 -->
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 0 auto;
+            margin-top: 80px;
+            /* 設置為inner1的包含塊 */
+            position: relative;
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* 水平位移 */
+            transform: translateX(50px);
+
+            /* 垂直方向位移 
+            50% 是參考的自己的height
+            */
+            /* transform: translateY(50%); */
+
+            /* 水平和垂直方向同時位移 */
+            /* 只寫一個字 只能代表X方向 */
+            /* transform: translate(50%,50%); */
+        }
+
+
+        /* 配合定位 設置元素居中（以前我們一般是使用margin）*/
+
+        .inner1 {
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            
+            position: absolute;
+            /* 這裏是絕對位移中相對父元素的移動 */
+            top: 50%;
+            left: 50%;
+            /* 再往左上移動自身的一半 */
+
+
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+    <div class="outer">
+        <div class="inner1"></div>
+    </div>
+</body>
+</html>

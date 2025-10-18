@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29_2D_旋轉</title>
+    <!-- 2D是圍繞Z軸變化的 -->
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 0 auto;
+            margin-top: 80px;
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+
+            /* rotateZ 代表的是2D的旋轉 
+            正值是順時針旋轉
+            */
+            /* transform: rotateZ(20deg); */
+            transform: rotate(40deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">你好啊</div>
+    </div>
+
+</body>
+</html>

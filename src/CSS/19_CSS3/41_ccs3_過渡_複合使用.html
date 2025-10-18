@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>41_ccs3_過渡_複合使用</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 100px;
+            border: 1px,solid,black;
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* 過度在父元素中設置，這樣返回的時候才是正常的 */
+
+            /* 使用複合屬性設置 
+            第一個出現的時間是  duration
+            第二個出現的時間是  delay
+            其他值沒有順序要求
+            */
+            transition: 3s all 1s linear;
+        }
+        
+        .outer:hover .inner{
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

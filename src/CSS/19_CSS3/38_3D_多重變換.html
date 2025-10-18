@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36_3D_旋轉</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 0 auto;
+            margin-top: 80px;
+            
+            /* 1.開啓3D空間*/
+            transform-style: preserve-3d;
+            /* 2.設置景深*/
+            perspective: 450px;
+
+            /* 3.設置透視點的位置 1值越大-右移 2值越大-下移  */
+            /* perspective-origin: 102px 102px; */
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(135, 207, 235, 0.64);
+
+            /* 對於2D變化scaleX 影響寬度，scaleY 影響高度 */
+
+            /* 對於3D變化來説 影響的是Z方向的，但是有沒有寬度，所以我們必須得先旋轉Y軸以後在調試*/
+            /* 加上旋轉以後，調整scaleZ的大小，效果就像是景深變小 */
+            /* transform: scaleZ(2) rotateY(30deg); */
+
+            transform: scale3d(1.5,1.5,2) rotateY(30deg);
+        }  
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+          你好啊
+        </div>
+    </div>
+
+</body>
+</html>

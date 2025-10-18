@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40_ccs3_過渡_高級使用</title>
+    <style>
+        .outer {
+            width: 1300px;
+            height: 900px;
+            border: 1px solid black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .outer:hover .box{
+            width: 1300px;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+
+            /* 所有能過度的屬性都過度，一般只要有數字的都能過度 */
+            transition-property: all;
+            transition-duration: 4s;
+            /* 過度掩飾使用 */
+            /* transition-delay: 1s; */
+
+        }
+
+        .box1 {
+            /* 過度的類型  ease:（默認）平滑過度  慢-快-慢*/
+            transition-timing-function: ease;
+            background-color: skyblue;
+        }
+        .box2 {
+             /* 過度的類型  linear:綫性的 匀速的  慢-快-慢*/
+            transition-timing-function: linear;
+            background-color: gray;
+        }
+        .box3 {
+            /* 過度的類型  ease-in:   慢-快*/
+            transition-timing-function: ease-in;
+            background-color: tomato;
+        }
+        .box4 {
+            /* 過度的類型  ease-out   快-慢*/
+            transition-timing-function: ease-out;
+            background-color: green;
+        }
+        .box5 {
+            /* 過度的類型  ease-in-out:   慢-快-慢*/
+            transition-timing-function: ease-in-out;
+            background-color: deepskyblue;
+        }
+        .box6 {
+           /* 過度的類型  tep-start:不考慮過度時間*/
+            transition-timing-function: step-start;
+            background-color: chocolate;
+        }
+        .box7 {
+            /* 過度的類型  tep-start:等過度時間后，直接變化*/
+            transition-timing-function: step-end;
+            background-color: chartreuse;
+        }
+        .box8 {
+            /* 過度的類型  steps(20) 就是分階段，分步的*/
+            transition-timing-function: steps(20);
+            background-color: sandybrown;
+        }
+        .box9 {
+            /* 使用貝塞爾曲綫  https://cubic-bezier.com/#.17,.67,.83,.67 */
+            transition-timing-function: cubic-bezier(.87,.9,.82,1.39);
+            background-color: goldenrod;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1 ease（默認）</div>
+        <div class="box box2">2 linear</div>
+        <div class="box box3">3 ease-in</div>
+        <div class="box box4">4 ease-out</div>
+        <div class="box box5">5 ease-in-out</div>
+        <div class="box box6">6 step-start</div>
+        <div class="box box7">7 step-end</div>
+        <div class="box box8">8 steps(20)</div>
+        <div class="box box9">9 貝塞爾曲綫</div>
+    </div>
+</body>
+</html>

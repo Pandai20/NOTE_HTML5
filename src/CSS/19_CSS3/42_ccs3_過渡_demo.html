@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42_ccs3_過渡_demo</title>
+    <style>
+       .outer {
+            width: 400px;
+            height: 225px;
+            border: 1px solid black;
+            /* 設置父元素為子的塊元素 */
+            position: relative;
+
+            /* 讓縮放后的圖片溢出部分隱藏起來 */
+            overflow: hidden;
+        }
+
+       img {
+            width: 400px;
+            height: 225px;
+            /* 設置所有屬性能夠過渡 */
+            transition-property: all;
+            transition-duration: 1s;
+
+       }
+       .inner {
+            width: 400px;
+            height: 225px;
+            background-color: black;
+            font-size: 50px;
+            text-align: center;
+            line-height: 225px;
+            color: white;
+            /* 使用定位 讓北極熊位於圖片之上 */
+            position: absolute;
+            left: 0;
+            top: 0;
+            /* 0-1 之間的小數，0：完全透明 */
+            opacity: 0;
+
+            /* 設置所有屬性能夠過渡 */
+            transition-property: all;
+            transition-duration: 1s;
+            cursor: pointer;
+       }
+
+       .outer:hover .inner{
+            opacity: 0.5;
+       }
+
+       .outer:hover img {
+            transform: scale(1.6) rotate(40deg);
+       }
+
+       
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <img src="../../path_test/001.jpg" alt="">
+        <div class="inner">北極熊</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34_3D_透視點的位置</title>
+    <!-- 就是觀察者的位置，默認觀察者的位置，就是父元素(開啓3D空間)的正中央-->
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 0 auto;
+            margin-top: 80px;
+            
+            /* 1.開啓3D空間*/
+            transform-style: preserve-3d;
+            /* 2.設置景深*/
+            perspective: 450px;
+
+            /* 3.設置透視點的位置 1值越大-右移 2值越大-下移  */
+            perspective-origin: 102px 102px;
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+
+            /* 圍繞X軸變化 */
+            transform: rotateX(30deg);
+            /* 圍繞Y軸變化 */
+            /* transform: rotateY(30deg); */
+            
+        }  
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+          你好啊
+        </div>
+    </div>
+
+</body>
+</html>

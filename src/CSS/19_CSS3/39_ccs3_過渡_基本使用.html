@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39_ccs3_過渡_基本使用</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* 設置哪個屬性需要過度效果 */
+            transition-property: width,height,background-color;
+            /* 所有能過度的屬性都過度，一般只要有數字的都能過度 */
+            transition-property: all;
+            /* 設置過度的時間 */
+            transition-duration: 1s,1s,1s;
+            transition-duration: 1s;
+        }
+
+        div:hover {
+            width: 400px;
+            height: 400px;
+            background-color: black;
+            transform: translateX(200px);
+            box-shadow: 10px 10px 10px green;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36_3D_旋轉</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 0 auto;
+            margin-top: 80px;
+            
+            /* 1.開啓3D空間*/
+            transform-style: preserve-3d;
+            /* 2.設置景深*/
+            perspective: 450px;
+
+            /* 3.設置透視點的位置 1值越大-右移 2值越大-下移  */
+            /* perspective-origin: 102px 102px; */
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(135, 207, 235, 0.64);
+
+            /* 從右邊看是順時針的，負值的話就是逆時針 */
+            transform: rotateX(30deg);
+
+            /* 這個一般不使用，0，0，0是開關，是否開啓轉動 */
+            /* transform: translate3d(0,0,0,30deg); */
+        }  
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+          你好啊
+        </div>
+    </div>
+
+</body>
+</html>
