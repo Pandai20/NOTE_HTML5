@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>46_動畫_和過渡的區別</title>
+    <style>
+
+        .outer {
+            width: 1300px;
+            height: 200px;
+            border: 1px solid black;
+
+        }
+        /* 動畫 */
+        .inner1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            animation: removeToLeft 3s linear 1 forwards;
+        }
+        @keyframes removeToLeft {
+            from { }
+            to {
+                transform: translateX(1200px);
+            }
+        }
+
+        /* 過渡 */
+        .inner2 {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+
+            transition: 3s linear;
+        }
+
+        .outer:hover .inner2 {
+            transform: translate(1200px);
+        }
+
+        /* 區別
+        1.過渡一定的被觸發的
+        2.動畫能夠被精細的控制
+        */
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner1"></div>
+        <div class="inner2"></div>
+    </div>
+</body>
+</html>

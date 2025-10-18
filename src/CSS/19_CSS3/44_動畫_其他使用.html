@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44_動畫_其他使用</title>
+    <style>
+
+        .outer {
+            width: 1300px;
+            height: 100px;
+            border: 1px solid black;
+
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+
+            /* 應用動畫到元素 */
+            animation-name: removeToLeft;
+            /* 動畫持續時間，讓動畫動起來*/
+            animation-duration: 1s;
+
+            /* 不添加會中斷 */
+            animation-delay: 0.5s;
+
+            
+            /* 其他屬性+++++++++++++ */
+            /* 1.設置動畫的方式--參考過渡的高級使用 */
+            animation-timing-function: linear;
+
+            /* 2.設置動畫的播放次數     infinite:無限的播放下去*/
+            /* animation-iteration-count: infinite; */
+
+            /* 3.動畫的方向 reverse:反方向的 alternate:往復運動 */
+            animation-direction: alternate;
+
+            /* 4.動畫以外的狀態（不發生動畫的時候在哪裏) */
+
+            /* 1.forwards:  设置对象状态为动画结束时的状态
+               2.backwards: 设置对象状态为动画开始时的状态*/
+            animation-fill-mode: forwards;
+
+            /* 5.暫停 */
+            
+        }
+        .outer:hover .inner {
+            /* 5.暫停 默認是running*/
+            animation-play-state: paused;
+        }
+        /* 簡單的定義一個動畫   --第一種方式*/
+        @keyframes removeToLeft {
+            from {
+
+            }
+
+            to {
+                transform: translateX(1200px) rotate(360deg);
+                /* 這個時候發現 過程中是終端的
+                需要更改瀏覽器設置：硬件加速
+                或者添加動畫延時時間
+                */
+                background-color: purple;
+                /*設置圓角*/
+                border-radius: 50%;
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>43_動畫_基本使用</title>
+    <style>
+
+        .outer {
+            width: 1300px;
+            height: 100px;
+            border: 1px solid black;
+
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+
+            /* 應用動畫到元素 */
+            animation-name: removeToLeft1;
+            /* 動畫持續時間，讓動畫動起來*/
+            animation-duration: 4s;
+
+            /* 不添加會中斷 */
+            animation-delay: 0.5s;
+        }
+        /* 簡單的定義一個動畫   --第一種方式*/
+        @keyframes removeToLeft {
+            from {
+
+            }
+
+
+
+            to {
+                transform: translateX(1200px);
+                /* 這個時候發現 過程中是終端的
+                需要更改瀏覽器設置：硬件加速
+                或者添加動畫延時時間
+                */
+                background-color: red;
+            }
+        }
+
+        /* 完整的定義一個動畫   --第二種方式*/
+        @keyframes removeToLeft1 {
+            0% {
+
+            }
+
+            29% {
+                background-color: red;
+            }
+
+            100% {
+                transform: translateX(1200px) rotate(360deg);
+                /* 這個時候發現 過程中是終端的
+                需要更改瀏覽器設置：硬件加速
+                或者添加動畫延時時間
+                */
+                background-color: purple;
+                /*設置圓角*/
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>
