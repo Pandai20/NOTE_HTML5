@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>57_伸縮盒模型_項目在主軸的基準長度</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 900px;
+            background-color: #888;
+            /* 设置为伸缩容器(开启了flex布局)，但是本质上还是div*/
+            display: flex;
+
+            /*主軸方向 */
+            flex-direction: row;
+            /* 設置主軸換行 */
+            flex-wrap: wrap;
+            
+            /* 主軸對齊方式，起始位置 */
+            justify-content: flex-start;
+
+            
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        /* 1，設置基準長度 */
+        .inner1 {
+            /* 設置伸縮項目在主軸上的基準長度，若主軸是橫向的寬消失，
+            若主軸是縱向的高消失。 */
+            flex-basis: 300px;
+
+            /* 瀏覽器是通過判斷這個值，來確定主軸上是否有空餘空間
+            ，默認值auto，：即 伸縮項目的寬或者高
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">0</div>
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+    </div>
+
+</body>
+</html>

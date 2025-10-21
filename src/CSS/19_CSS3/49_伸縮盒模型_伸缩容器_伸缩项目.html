@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>49_伸縮盒模型_伸缩容器_伸缩项目</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 600px;
+            background-color: #888;
+            /* 设置为伸缩容器(开启了flex布局)，但是本质上还是div*/
+            display: flex;
+
+            /* 设置为伸缩容器(开启了flex布局)
+            ，并且设置为了行类块元素**但是不常用*/
+            /* display: inline-flex; */
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <!-- 子元素都是：伸缩项目。但是孙子不是！
+        只要是伸缩项目  ： 全部都变成了块  
+        -->
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <span class="inner">3</span>
+    </div>
+</body>
+</html>

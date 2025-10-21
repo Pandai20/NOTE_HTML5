@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>59_伸縮項目_伸_</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 900px;
+            background-color: #888;
+            /* 设置为伸缩容器(开启了flex布局)，但是本质上还是div*/
+            display: flex;
+
+            /*主軸方向 */
+            flex-direction: row;
+            /* 設置主軸換行 */
+            flex-wrap: wrap;
+            
+            /* 主軸對齊方式，起始位置 */
+            justify-content: flex-start;
+
+            
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+
+            /* 1.每個人等分，剩餘空間  均分的*/
+            /* flex-grow: 1; */
+        }
+
+        .inner1 {
+            /*分6分之1 */
+            flex-grow: 1;
+        }
+        .inner2 {
+            width: 300px;
+            /*分6分之2 */
+            flex-grow: 2;
+        }
+
+        .inner3{
+            /*分6分之3 */
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+
+</body>
+</html>

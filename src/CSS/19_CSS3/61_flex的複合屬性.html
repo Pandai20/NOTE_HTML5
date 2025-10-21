@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>61_flex的複合屬性</title>
+    <style>
+        .outer {
+            width: 700px;
+            height: 900px;
+            background-color: #888;
+            /* 设置为伸缩容器(开启了flex布局)，但是本质上还是div*/
+            display: flex;
+
+            /*主軸方向 */
+            flex-direction: row;
+            /*不能設置主軸換行 */
+            /* flex-wrap: wrap; */
+            
+            /* 主軸對齊方式，起始位置 */
+            justify-content: flex-start;
+
+            
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /*border 和box-sizing 會影響收縮的大小的，計算的時候去掉*/
+            border: 1px solid black;
+            box-sizing: border-box;
+
+            /* 伸 ：每個人等分，剩餘空間  均分的*/
+            flex-grow: 1;
+
+            /* 縮 */
+            flex-shrink: 1;
+
+            /* 基準長度 */
+            flex-basis: 100px;
+
+            /* 1.複合屬性 語法：grow shrink  basis 
+            可以拉伸 壓縮 不設置基準長度  簡寫 flex:auto;
+            */
+            flex: 1 1 auto;
+
+            /* 2.可以拉伸 壓縮 基準長度0  簡寫 flex:1; */
+            flex: 1 1 0;
+
+            /* 3.不可以拉伸 不可壓縮 不設置基準長度  簡寫 flex:none; */
+            flex: 0 0 auto;
+            
+            /* 4.不可以拉伸 可壓縮 不設置基準長度  簡寫 flex:0 aut0; */
+            flex: 0 1 auto;
+        }
+
+       
+        .inner2 {
+            width: 300px;
+            
+        }
+
+     
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+
+</body>
+</html>

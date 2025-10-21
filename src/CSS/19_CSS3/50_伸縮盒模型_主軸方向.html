@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50_伸縮盒模型_主軸方向</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 600px;
+            background-color: #888;
+
+           
+
+            /* 设置为伸缩容器(开启了flex布局)，但是本质上还是div*/
+            display: flex;
+
+            /* 伸縮和模型相關的屬性： 主軸  側軸
+            主軸：默認從左到右，右邊是終點，且水平的
+            側軸：默認從上到下，下邊是終點，且垂直于主軸
+                元素默認排列方向是按照主軸的方向的！
+                主軸方向改變，側軸方向也會改變。
+            */
+            /* 1.row: 默認的 */
+            /* flex-direction: row; */
+
+            /* 2.主軸方向從右到左  reverse ：相反的*/
+            /* flex-direction: row-reverse; */
+
+            /* 3.主軸方向從上到下  column: 列*/
+            /* flex-direction: column; */
+
+            /* 4.主軸方向由下到上 */
+            flex-direction: column-reverse;
+
+
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+    </div>
+</body>
+</html>

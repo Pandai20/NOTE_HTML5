@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>54_伸縮盒模型_側軸對齊_一行</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 600px;
+            background-color: #888;
+            /* 设置为伸缩容器(开启了flex布局)，但是本质上还是div*/
+            display: flex;
+
+            /*主軸方向 */
+            flex-direction: row;
+            /* 設置主軸換行 */
+            flex-wrap: wrap;
+            
+            /* 僅使用與只有個一行的情況！！！！！！！ */
+
+            /*1.側軸對其，起始位置對齊*/
+            /* align-items: flex-start; */
+
+            /*2.側軸對其，結束位置對齊*/
+            /* align-items: flex-end; */
+
+            /*3.側軸對其，中間位置對齊*/
+            /* align-items: center; */
+
+            /*4.側軸對其，默認對其
+            stretch:拉伸 ，只有當顯目沒有給高的時候，
+            會覆蓋整列。給了高就和flex-start的效果是一樣的
+            */
+            align-items: stretch;
+
+            /* 基綫對齊，一般不用 */
+            /* align-items: baseline; */
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        .inner1 {
+            height: 300px;
+        }
+        .inner2 {
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <!-- 發現排滿以後不會換行,而是元素會被壓縮 -->
+        <div class="inner">1</div>
+        <div class="inner inner1">2</div>
+        <div class="inner inner2">3</div>
+    </div>
+    <br>
+
+</body>
+</html>

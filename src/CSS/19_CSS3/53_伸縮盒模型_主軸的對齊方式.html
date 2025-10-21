@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>53_伸縮盒模型_主軸的對齊方式</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 600px;
+            background-color: #888;
+            /* 设置为伸缩容器(开启了flex布局)，但是本质上还是div*/
+            display: flex;
+            /*row: 默認的 */
+            /* flex-direction: row; */
+            /* 設置主軸換行 */
+            /* flex-wrap: wrap; */
+            
+            /* 符合屬性 ,沒有順序要求*/
+            flex-flow: wrap row;
+            
+            /* 1.主軸的對齊方式  flex-start:主軸的起始位置*/
+            justify-content: flex-start;
+
+            /* 2.主軸的對齊方式  flex-end:主軸的結束位置*/
+            justify-content: flex-end;
+
+            /* 3.主軸的對齊方式  center:中間對齊*/
+            justify-content: center;
+
+            /* 4.主軸的對齊方式  space-around項目均匀的分佈在一行中
+            項目和項目的距離是，項目和邊緣的兩倍
+            */
+            justify-content: space-around;
+
+            /* 5.主軸的對齊方式  space-between項目均匀的分佈在一行中
+            項目和項目的距離是相等的，項目和邊緣沒有距離
+            */
+            /* justify-content: space-between; */
+
+            /* 6.主軸的對齊方式  space-evenly項目均匀的分佈在一行中
+            距離是相等的
+            */
+            /* justify-content: space-evenly; */
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <!-- 發現排滿以後不會換行,而是元素會被壓縮 -->
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+        <div class="inner">4</div>
+        <div class="inner">5</div>
+        <div class="inner">6</div>
+        <div class="inner">7</div>
+    </div>
+    <br>
+
+</body>
+</html>

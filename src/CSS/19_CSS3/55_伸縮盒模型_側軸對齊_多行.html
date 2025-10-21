@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>55_伸縮盒模型_側軸對齊_多行</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 900px;
+            background-color: #888;
+            /* 设置为伸缩容器(开启了flex布局)，但是本质上还是div*/
+            display: flex;
+
+            /*主軸方向 */
+            flex-direction: row;
+            /* 設置主軸換行 */
+            flex-wrap: wrap;
+            
+            /* 主軸對齊方式，起始位置 */
+            justify-items: flex-start;
+
+            /* 1.多行的側軸的對齊方式 flex-start:起始對齊*/
+            /* align-content: flex-start; */
+
+            /* 2.多行的側軸的對齊方式 flex-end:結束對齊*/
+            /* align-content: flex-end; */
+
+            /* 3.多行的側軸的對齊方式 center:中間*/
+            /* align-content: center; */
+
+            /* 4.多行的側軸的對齊方式  space-around
+                伸縮項目之間的距離是相等的，且是項目距離邊緣的距離的二倍。
+            */
+            /* align-content: space-around; */
+
+            /* 5.多行的側軸的對齊方式  space-between
+                伸縮項目之間的距離是相等的，且邊緣沒有距離。
+            */
+            /* align-content: space-between; */
+
+            /* 6.多行的側軸的對齊方式  space-evenly
+                伸縮項目之間的距離是相等的，且邊緣距離也相等。
+            */
+            /* align-content: space-evenly; */
+
+            /* 7.多行的側軸的對齊方式  stretch
+                默認，拉伸，但是只有在項目沒有高度的時候才會鋪滿。
+                如果設置了高度就和flex-start是一樣的
+            */
+            align-content: stretch;
+            
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        .inner1 {
+            height: 300px;
+        }
+        .inner2 {
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">0</div>
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+        <div class="inner inner4">4</div>
+        <div class="inner inner5">5</div>
+        <div class="inner inner6">6</div>
+        <div class="inner inner7">7</div>
+        <div class="inner inner8">8</div>
+        <div class="inner inner9">9</div>
+        <div class="inner inner10">10</div>
+    </div>
+    <br>
+
+</body>
+</html>

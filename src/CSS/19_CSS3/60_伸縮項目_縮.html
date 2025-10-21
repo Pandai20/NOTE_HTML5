@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60_伸縮項目_縮</title>
+    <style>
+        .outer {
+            width: 700px;
+            height: 900px;
+            background-color: #888;
+            /* 设置为伸缩容器(开启了flex布局)，但是本质上还是div*/
+            display: flex;
+
+            /*主軸方向 */
+            flex-direction: row;
+            /*3. 不能設置主軸換行 */
+            /* flex-wrap: wrap; */
+            
+            /* 主軸對齊方式，起始位置 */
+            justify-content: flex-start;
+
+            
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /*1. border 和box-sizing 會影響收縮的大小的，計算的時候去掉*/
+            border: 1px solid black;
+            box-sizing: border-box;
+
+            /* 伸 ：每個人等分，剩餘空間  均分的*/
+            /* flex-grow: 1; */
+
+            /* 2. 縮 ： 分母是  長度1*shrink +長度n*shrink
+                        比例值  長度1*shrink / 分母
+                    最終大小    比例值*要收縮的長度
+            */
+            flex-shrink: 1;
+        }
+
+       
+        .inner2 {
+            width: 300px;
+            
+        }
+
+     
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+
+</body>
+</html>
