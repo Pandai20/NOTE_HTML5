@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>63媒體查詢特性</title>
+    <style>
+        h1 {
+            height: 200px;
+            background-color: gray;
+            font-size: 50px;
+        
+        }
+
+        /* 頁面大小為如下時，設置指定的樣式 */
+        @media (width:799px) {
+            h1 {
+                background-color: green;
+            }
+        }
+
+        @media (height:676px) {
+            h1 {
+                background-color: yellow;
+            }
+        }
+
+        /* 檢測到寬度小於等於時 */
+        @media (max-width:676px) {
+            h1 {
+                background-color: blueviolet;
+            }
+        }
+
+        /* 檢測到寬度大於等於時 */
+        @media (min-width:676px) {
+            h1 {
+                background-color: orange;
+            }
+        }
+
+        /* 檢測到整個屏幕設備的寬度 */
+        @media (device-width:676px) {
+            h1 {
+                background-color: orange;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>你好</h1>
+</body>
+</html>
