@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07循环语句</title>
+    <script>
+        /* ===================for循环========================= */
+        console.log('1.for循环 ================start ');
+        // 1.基本结构
+        for (var index = 0; index < 4; index++) {
+            console.log("   这里是for循环 ",index);
+        }
+
+        /* ===================while循环========================= */
+        console.log('2.while循环 ================start ');
+        // 1.基本结构
+        var index = 0;
+        while (1) {
+            index++;
+            console.log("   这里是while循环 ",index);
+            if (index == 5) {
+                 console.log("   退出while循环 ",index);
+                break;
+            }
+        }
+
+        /* ===================do while循环========================= */
+        console.log('3.do while循环 ================start ');
+        // 1.基本结构
+        var index = 0;
+        do {
+            index++;
+            console.log("   dowhile循环 ",index);
+            if (index == 5) {
+                 console.log("   退出这里是while循环 ",index);
+                break;
+            }
+        } while (1);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

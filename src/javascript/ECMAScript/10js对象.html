@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10js对象</title>
+    <script>
+        console.log('============ 1.对象字面量 创建对象{}=============== ');
+        // 1.对象字面量 创建对象{}
+        var obj = {};//创建一个空对象
+        
+        var obj1 = {
+            uname: '张山峰',
+            age: 12,
+            sex: 'male',
+            // 创建一个方法
+            sayHello: function () {
+                console.log('   hello world');
+            }
+        }
+        obj1.sayHello();
+        // 调用属性的方法
+        console.log('   obj1.age :>> ', obj1.age);
+        console.log('   obj1["uname"] :>> ', obj1['uname']);
+
+        console.log('============2.使用new 创建对象=============== ');
+        // 2.使用new 创建对象
+        var obj2 = new Object();
+        obj2.uname = '王思聪';
+        obj2.age = 22;
+        obj2.sex = 55;
+        obj2.sayHello = function() {
+            console.log('   new对象obj2.uname ', obj2.uname);
+        }
+        obj2.sayHello();
+        console.log('   new对象obj2.age :>> ', obj2.age);
+
+        console.log('============3.使用构造函数创建对象=============== ');
+        // 3.使用构造函数创建对象
+        //  3.1构造函数的首字母一定要大写
+        function Create(name,age,sex) {
+            this.name = name;
+            this.age =age;
+            this.sex =sex;
+        }
+
+        var ldh = new Create('刘德华',23,'man');
+        console.log('   typeof(ldh) :>> ', typeof(ldh));
+        console.log('   ldh :>> ', ldh);
+        console.log('============4.遍历对象=============== ');
+        // 4.遍历对象
+        // 约定变量的时候一般是 k  或者 key
+        for(var key in ldh) {
+            console.log('   属性名称 :>> ', key);
+        }
+        console.log('\n');
+        for(var key in ldh) {
+            console.log('   属性名值 :>> ', ldh[key]);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

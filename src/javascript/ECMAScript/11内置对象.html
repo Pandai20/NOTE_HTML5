@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11内置对象</title>
+    <!-- 就是浏览器提供的一些内置对象 查阅MDN -->
+    <script>
+        console.log('============1.Math对象=============== ');
+        // 1.Math对象
+            // Math属性
+        console.log('   圆周率Math.PI :>> ', Math.PI);
+            // Math方法
+        console.log('   内置对象Math.max :>> ', Math.max(1,23,66,7,8));
+
+
+        console.log('============2.封装自己的math=============== ');
+        // 2.封装自己的math
+        var myMath = {
+            PI : 3.1415,
+            max: function() {
+                var max = arguments[0];
+                for(var i = 0;i<arguments.length;i++) {
+                    if(max < arguments[i]) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            }
+        }
+        console.log('   自己封装myMath.max() :>> ', myMath.max(2,3));
+
+        // 1.绝对值
+        console.log('   绝对值Math.abs(-11) :>> ', Math.abs(-11));
+            // 这里有隐式转换，会把字符串转换为数值
+        console.log('   Math.abs("-1") :>> ', Math.abs('-1'));
+            // 返回非数字 NaN
+        console.log('   Math.abs("black") :>> ', Math.abs('black'));
+
+
+        console.log('============ 3.三个取整的方法=============== ');
+        // 3.三个取整的方法
+        // (1)往大了取值 ，1.1 、1.9 都是2
+        console.log('   Math.floor(1.6) :>> ', Math.floor(1.6));
+        // (2)往小了取值 ，1.1 、1.9 都是1
+        console.log('   Math.ceil(1.6) :>> ', Math.ceil(1.6));
+        // (3)四舍五入
+        console.log('   Math.round(1.4) :>> ', Math.round(1.4));
+        console.log('   Math.round(1.6) :>> ', Math.round(1.6));
+            // 如果是负数-n.5,还是-n
+        console.log('   Math.round(1.6) :>> ', Math.round(-1.5));
+
+        console.log('============ 4.随机数 random=============== ');
+        //随机数的取值范围[0,1)
+        console.log('   Math.round(1.6) :>> ', Math.random());
+
+
+         console.log('============ 5.日期对象 date=============== ');
+        // 1,使用date
+        var mydate = new Date();
+        console.log('   mydate :>> ', mydate);
+        // 
+        var mydate1 = new Date(1996,12,12);
+        console.log('   mydate1 :>> ', mydate1);
+
+        var mydate2 = new Date("1995-12-17 03:24:00");
+        console.log('   mydate1 :>> ', mydate2);
+
+        // 2.使用date的方法
+        console.log('   getFullYear :>> ', mydate.getFullYear());
+            //月份 这里Month是从【0-11】，因此需要+1
+        console.log('   getMonth :>> ', mydate.getMonth() + 1);
+            //星期 这里周日是0，周六返回的是6
+        console.log('   getFullYear :>> ', mydate.getDay());
+            //几号
+        console.log('   getFullYear :>> ', mydate.getDate());
+        
+        // 3.拼接一个当前日期时间
+        var year = mydate.getFullYear();
+        var month = mydate.getMonth();
+        var dates = mydate.getDate();
+        var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        var day = arr[mydate.getDay()];
+        console.log('   今天是 '+year+'年'+month+'月'+dates+'日'+' '+day);
+
+        
+        // 4.时分秒
+        //valueOf() 方法用于返回自纪元（即协调世界时 1970年1月1日零点）以来的毫秒数
+        // 这种时间也叫做时间戳
+        console.log('    mydate.valueOf() :>> ', mydate.valueOf());
+        console.log('    mydate.valueOf() :>> ', mydate.getTime());
+        // 1.使用简单的写法（最常用的写法）
+        var date_ms = +new Date();
+        console.log('   +new Date() :>> ', date_ms);
+        // 2.H5新增的毫米数
+        console.log('   Date.now() :>> ', Date.now());
+
+
+        console.log('============ 6.倒计时=============== ');
+        /*parseInt() 会自动去掉小数部分，只保留整数部分。 
+        parseInt(总秒数/60/60/24)  计算天数
+        parseInt(总秒数/60/60%24)  计算小时
+        parseInt(总秒数/60%60)  计算分钟数
+        parseInt(总秒数%60)  计算当前秒数
+        */
+       
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09函数</title>
+    <script>
+        /* 1.函数如果没有返回，那么就会返回undefined */
+        function add(number) {
+            number += 5;
+            console.log('   number += 5 :>> ', number);
+        }
+        // 如果实参的个数，比形参少。多余的形参是没定义的undefined，最终结果是NaN
+        add();
+        
+        // 实参不会因为形参而改变
+        var i = 1;
+        add(i)
+        console.log('   i :>> ', i);
+
+        // 如果实参的个数，比形参多. 只会取到形参的个数的参数
+        add(1,2);
+
+
+        /*2. 函数返回值  */
+        function toReturn() {
+            // 每一个函数中都有一个arguments,存了所有传过来的参数
+            /* arguments是伪数组
+            1.具有数组的length属性
+            2.按照索引的方式进行存储的
+            3.他没有真正数组的一些方法pop() push()
+            */
+            console.log('   arguments :>> ', arguments);
+            console.log('   arguments[0] :>> ', arguments[0]);
+            console.log('   arguments.length :>> ', arguments.length);
+            return "我是返回值";
+        }
+        console.log('   toReturn()返回的是 :>> ', toReturn(1,'ok'));
+
+
+        // 3.使用arguments，求任意实参函数的最大值
+        function getMax() {
+            let max_value = arguments[0]
+            for (let index = 1; index < arguments.length; index++) {
+                if (max_value < arguments[index]) {
+                     max_value = arguments[index];
+                }
+            }
+            return max_value;
+        }
+        console.log('   getMax()返回的是 :>> ', getMax(1,2,8,7,2));
+
+
+        // 4。函数表达式声明函数（匿名函数）
+        // var 变量名 = function(){};
+        var getNumber = function(number){
+            console.log('   匿名函数 :>> ', number);
+            // 函数内部声明全局变量
+            number_value = 20;
+        }
+        getNumber(123);
+
+        console.log('   函数内部声明全局变量number_value :>> ', number_value);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

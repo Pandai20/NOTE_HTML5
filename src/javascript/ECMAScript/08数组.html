@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08数组</title>
+    <script>
+        //1.使用new创建数组
+            //创建一个空数组
+        var arr = new Array(); 
+        //2.使用数组字面量创建数组[]
+        var arr = [];
+            //可以添加任意类型的元素
+        var arr1 = [1,'name',true];
+
+        //3.访问数组内容
+        console.log('   访问arr1 :>> ', arr1);
+        console.log('   访问arr1[0] :>> ', arr1[0]);
+        console.log('   访问arr1[1] :>> ', arr1[1]);
+        console.log('   访问arr1[2] :>> ', arr1[2]);
+
+        //4.访问数组元素，let是局部变量
+        for (let index = 0; index < arr1.length; index++) {
+            console.log('   遍历arr1 :>> ', arr1[index]);
+        }
+
+        // 5.新增数组的长度
+        console.log('  当前数组的长度:>> ', arr1.length );
+            // 修改数组的长度
+        arr1.length = 5;
+        console.log('   修改后的数组的长度 :>> ', arr1.length);
+        console.log('   修改后的数组的内容 :>> ', arr1);
+
+        // 6.通过修改索引号,不要直接赋值给arr2，否则会直接替换该数组
+        var arr2 = [2,'name',false];
+        arr2[3] = 'pink';
+        arr2[4] = 3355;
+        console.log('   修改后的数组arr2的内容 :>> ', arr2);
+
+         console.log('============ 7.数组创建的两种方式=============== ');
+        // 1.字面量创建数组
+        var arr =[1,2,3];
+        console.log('   arr :>> ',     arr);
+        // 2.通过new创建数组
+        var arr1 = new Array()//创建空数组
+        var arr2 = new Array(2)//创建一个两个长度的数组
+        var arr3 = new Array(2,3)//创建长度是2，内容分别是2，3的数组
+        console.log('   arr3 :>> ', arr3);
+        
+        console.log('============ 8.检测是不是数组=============== ');
+        // 1.通过运算符 instanceof 检测.    成功返回为true
+        var obj = {};
+        var number_value = 0;
+        var strName = 'hande';
+        console.log('   arr是数组嘛 :>> ',arr instanceof Array);
+        console.log('   obj是数组嘛 :>> ',obj instanceof Array);
+        console.log('   number_value是数组嘛 :>> ',number_value instanceof Array);
+        console.log('   strName是数组嘛 :>> ',strName instanceof Array);
+        // 2.通过方法 isArray
+        console.log('   arr是数组嘛 :>> ',Array.isArray(arr));
+        console.log('   obj是数组嘛 :>> ',Array.isArray(obj));
+        console.log('   number_value是数组嘛 :>> ',Array.isArray(number_value));
+        console.log('   strName是数组嘛 :>> ',Array.isArray(strName));
+
+        console.log('============ 9.添加删除元素=============== ');
+        // 1.push()  在数组末尾添加数组元素
+        var arr_push = [1,23,4,6];
+        var newArray_lenth = arr_push.push('jock',999);
+        console.log('   arr_push :>> ', arr_push);
+        console.log('   arr_push后的长度 :>> ', newArray_lenth);
+        // 2.unshift()  在数组前面添加数组元素
+        var arr_unshift = [1,23,4,6];
+        var unshift_lenth = arr_unshift.unshift('petter',888);
+        console.log('   arr_unshift :>> ', arr_unshift);
+        console.log('   arr_unshift后的长度 :>> ', unshift_lenth);
+        // 3.pop()  删除数组最后的一个元素
+        var arr_pop = [1,23,4,'final'];
+        var pop_lenth = arr_pop.pop();//返回删除的元素
+        console.log('   arr_unshift :>> ', arr_pop);
+        console.log('   arr_unshift后的长度 :>> ', pop_lenth);
+        // 4.shift()  删除数组第一个元素
+        var arr_shift = ['fist',23,4,6];
+        var shift_lenth = arr_shift.shift();//返回删除的元素
+        console.log('   arr_unshift :>> ', arr_shift);
+        console.log('   arr_unshift后的长度 :>> ', shift_lenth);
+
+        console.log('============ 10.数组排序=============== ');
+        // 1.翻转数组
+        var arr_re = ['jack','rose','pink'];
+        console.log('   翻转数组 :>> ', arr_re.reverse());
+
+        // 2.数组排序（冒泡）
+        var arr_sort = [13,4,77,1,7]
+        // 直接进行.sort()是不行的，有点类似与Lambda
+        /* console.log('   数组排序 :>> ', arr_sort.sort()); */
+        // 正确的写法：
+        arr_sort.sort(function(a,b){
+            //return a - b;//升序排列
+            return b - a;//降序排列
+        })
+        console.log('   数组排序 :>> ', arr_sort);
+
+        console.log('============ 11.数组获取元素的索引=============== ');
+        var arr_indexof = ['jack','rose','rose','pink'];
+        // 如果元素重复的话就会只返回检测到的第一个元素的索引
+        console.log('   获取元素的索引 :>> ', arr_indexof.indexOf('rose'));
+        // 值得从第几个索引开始
+         console.log('   获取元素的索引 :>> ', arr_indexof.indexOf('rose',2));
+
+        console.log('============ 12.数组转换为字符串=============== ');
+        // 1.toString()转换为字符串, 中间使用,分割开
+        var arr_toString = [1,23,4,'final'];
+        console.log('   arr_toString :>> ', arr_toString.toString());
+        // 2.join(分隔符)转换为字符串, 可以自定义分隔符
+         console.log('   join(分隔符) :>> ', arr_toString.join('&'));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

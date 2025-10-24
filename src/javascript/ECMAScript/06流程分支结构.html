@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06流程分支结构</title>
+    <script>
+        /* ===================if语法========================= */
+        console.log('1.if语法 ================start ');
+        // 1.基本结构
+        if (1) {
+            console.log('   is true');
+        } else {
+            console.log('   is false');
+        }
+
+        // 2.else if
+        if (!1) {
+            console.log('   is 1');
+        } else if (!2){
+            console.log('   is 2');
+        }else if(3){
+            console.log('   is 3');
+        }else {
+            console.log('   is else');
+        }
+        
+        /* ===================三元表达式========================= */
+        console.log('2.三元表达式 ================start ');
+        var number = 1+1 ? true : false;
+        console.log('   三元表达式: (1 + 1 ? true : false) :>> ', number);
+        console.log('   三元表达式: (1 - 1 ? "是的" : "不是的") :>> ', (1 - 1 ? "是的" : "不是的"));
+
+
+        /* ===================switch语句========================= */
+        console.log('4.switch语句 ================start ');
+        // 1.基本结构
+        // 注意：switch中的值 必须和 case的值  全等（===）
+        switch ( 0 ) {
+            case 1:
+                console.log('   swithc 1');
+                break;
+            case 2:
+                console.log('   swithc 2');
+                break;
+            default:
+                console.log('   swithc others');
+                break;
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

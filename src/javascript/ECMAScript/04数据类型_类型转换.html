@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04数据类型_类型转换</title>
+    <script>
+        // js的变量数据类型只有在程序运行过程中，通过等号右边的值来确定的。
+
+        // js是动态语言，数据的类型是可以变换的
+
+        var number = 10;
+        number ='also';
+
+         /* ===================数字形式========================= */
+        console.log('1.Number 数字型 ================start ');
+        // 1.Number 数字型
+        var number1 = 10.123;
+            // 八进制 ES6+ 语法
+        var num_octal = 0o010; 
+        console.log('   num_octal :>> ', num_octal);
+            // 二进制
+        var num_binary = 0b00101;
+        console.log('   num_binary :>> ', num_binary);
+            // 十六进制
+        var num_hexdecimal = 0x10;
+        console.log('   num_hexdecimal的值是  :>> ', num_hexdecimal);
+            // 数字型的最大值
+        console.log('   number最大值 :>> ', Number.MAX_VALUE);
+            // 数字型的最小值
+        console.log('   数字型的最小值 :>> ', Number.MIN_VALUE);
+            // 无穷大 Infinity
+        console.log('   无穷大 :>> ', Number.MAX_VALUE*2);
+            // 无穷小 -Infinity
+        console.log('   无穷小 :>> ', -Number.MAX_VALUE*2);
+            // 非数字  NaN
+        console.log('   非数字 :>> ', number - 'sdaf');
+
+            //验证数字是不是 非数字。true/false
+        console.log('   number是数字吗 :>> ', isNaN(number));
+
+
+
+        /* ===================字符串形式========================= */
+        console.log('2.String 字符串型的 ================start ');
+        // js中一般是使用单引号 '',如果有引号嵌套的话：外双内单，外单内双
+        var strDream1 = '我想成为"大大大前端"的\n程序员';
+        var strDream2 = "我想成为'大大大前端'的程序员";
+            console.log('   my dream :>> ', strDream1);
+            console.log('   my dream :>> ', strDream2);
+        /*转义符和c++一致的
+            \n 换行
+            \\
+            \'
+            \t tab缩进
+            \b 空格
+        */
+
+        //检测字符串长度
+        var str = 'my name:';
+        console.log('   获取字符串长度 :>> ', str.length);
+
+        //字符串的拼接
+        var strFistName = 'jack';
+        console.log('   字符串的拼接 :>> ', str + strFistName);
+        // 不同类型的拼接,结果还是还是字符串
+        console.log('   不同类型的拼接 :>> ', 'jock' + 123);
+
+
+        /* ===================布尔类型========================= */
+        console.log('3.boolean 布尔类型 ================start ');
+        var flag = true;
+        var flag1 = false;
+        console.log('   flag :>> ', flag);
+        console.log('   flag1 :>> ', flag1 + 1);
+
+        // 定义一个未定义的数据类型
+        var variable = undefined;
+            //结果不是一个数字 NaN
+        console.log('   未定义和数字相加variable :>> ', variable + 1);
+            //结果是字符串
+        console.log('   未定义和字符串相加variable :>> ', variable + '1');
+
+        // 空值
+        var space = null;
+            //结果是字符串
+        console.log('   空值和字符串相加space :>> ', space + 'space');
+            //结果是1
+        console.log('   空值和数字相加space :>> ', space + 1);
+
+
+        /* ===================获取类型========================= */
+        console.log('4.typeof 获取类型 ================start ');
+
+        var num = 11,
+            name = 'jack',
+            space1 = null,
+            strUndef = undefined,
+            is_boolean = true;
+        console.log('   数字 typeof :>> ', typeof num );
+        console.log('   字符串 typeof :>> ', typeof(name));
+        // 这里空值是一个对象 object
+        console.log('   空值 typeof :>> ', typeof(space1));
+        console.log('   未定义 typeof :>> ', typeof(strUndef));
+        console.log('   布尔 typeof :>> ', typeof(is_boolean));
+        
+
+        /* ===================字符类型和数字之间的转换========================= */
+        /* 转换为字符串类型========================= */
+        console.log('5. 转换为字符串类型 ================start ');
+       
+        //1.toString()转换为字符串类型
+        var number_5 = 10;
+        var to_str = number_5.toString();
+        console.log("   to_str的值是:>> ", to_str,'，对应类型:>> ', typeof to_str);
+        //2.String()强转
+        var is_String = String(number_5);
+        console.log("   is_String的值是:>> ", is_String,'，对应类型:>> ', typeof is_String);
+        //3.使用+拼接操作  --- 又被成为隐式转换
+        var to_add = number_5 +'';
+        console.log("   to_add的值是:>> ", to_add,'，对应类型:>> ', typeof to_add);
+
+
+        /* 转换为数字类型========================= */
+        console.log('6. 转换为数值 ================start ');
+        //1.parseInt转换为数字类型的整数
+        var age = '55.5';
+        var parse_Int = parseInt(age);
+            //只能转换为整数，没有小数
+        console.log("    parseInt()转换parse_Int的值是:>> ", parse_Int,'，对应类型:>> ', typeof parse_Int);
+            //可以去掉后面的字母
+        console.log('   120px 去掉后面的字母 :>> ', parseInt('120px'));
+
+        // 2.parseFloat转换为数字类型的,可以有小数
+        var num_float = '3.14159';
+        var to_number = parseFloat(num_float);
+        console.log("   parseFloat()转换to_number的值是:>> ", to_number,'，对应类型:>> ', typeof parse_Int);
+        // 3.强转
+        var to_Number = Number(num_float);
+        console.log("   Number()强转的值是:>> ", to_Number,'，对应类型:>> ', typeof to_Number);
+        // 4，隐式转换 - * /
+        console.log('   使用-进行隐式转换 :>> ',  ('12'- 0),'，对应类型:>> ', typeof('12'- 0));
+        console.log('   "123" - "122"的值是 :>> ', '123'- '121');
+        console.log('   "123" * 2的值是 :>> ', '123'* 2);
+        console.log('   "123" / "12"的值是 :>> ', '123'/ 12);
+
+
+
+        /* ===================转换为布尔型========================= */
+        console.log('7. 转换为布尔型 ================start ');
+            console.log('   Boolean("")     :>> ', Boolean(""));
+            console.log('   Boolean(0)      :>> ', Boolean(0));
+            console.log('   Boolean(NaN)    :>> ', Boolean(NaN));
+            console.log('   Boolean(null)   :>> ', Boolean(null));
+            console.log('   Boolean(undefined)  :>> ', Boolean(undefined));
+            console.log('   Boolean("小巴")     :>> ', Boolean('小巴'));
+            console.log('   Boolean(12)         :>> ', Boolean(12));
+
+    </script>
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
