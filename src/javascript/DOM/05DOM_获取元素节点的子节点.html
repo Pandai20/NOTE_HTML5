@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>05DOM_获取元素节点的子节点</title>
+    </head>
+    <body>
+        <div class="outer">
+            <div class="left_top">
+                <div>你喜欢哪个城市</div>
+                <ul id="city">
+                    <li>北京</li>
+                    <li>上海</li>
+                    <li>东京</li>
+                    <li>首尔</li>
+                </ul>
+                <div>你喜欢哪款单机游戏</div>
+                <ul class="game">
+                    <li>红警</li>
+                    <li>实况</li>
+                    <li>极品飞车</li>
+                    <li>魔兽</li>
+                </ul>
+                <div>你手机的操作系统</div>
+                <ul class="operator">
+                    <li>IOS</li>
+                    <li>Android</li>
+                    <li>Windows phone</li>
+                </ul>
+            </div>
+            <input type="radio" name="gender" value="male" class="男" />
+            Male
+            <input type="radio" name="gender" value="female" class="女" />
+            Female
+        </div>
+        <script>
+            /* 1.获取当前指定标签名的后代节点 getElementsByTagName() */
+            // 问题： 查找city下的所有li节点
+            //      1.1首先获取city元素
+            var city = document.getElementById("city");
+            //      1.2然后获取city后代节点
+            var list = city.getElementsByTagName("li");
+            console.log("后代节点li的个数 :>> ", list.length);
+            for (let index = 0; index < list.length; index++) {
+                const element = list[index];
+                console.log("   后代节点line内容 :>> ", element.innerText);
+            }
+
+            /* 2.通过childNodes,获取包括文本节点在内的所有节点
+                根据DOM标签  标签间的空白也会当成文本节点
+            */
+            var cns = city.childNodes;
+            console.log("cns :>> ", cns);
+            console.log("所有节点的个数 :>> ", cns.length);
+            for (let index = 0; index < cns.length; index++) {
+                const element = cns[index];
+                if (element.nodeType == 3) {
+                    console.log("   我是空白节点 :>> ", element.nodeType);
+                } else {
+                    console.log("   cns后代节点内容 :>> ", element.innerText);
+                }
+            }
+
+            /* 3.通过 children 获取当前元素的所有子元素 */
+            var ccr = city.children;
+            console.log("ccr :>> ", ccr);
+            console.log("子元素的个数 :>> ", ccr.length);
+            for (let index = 0; index < ccr.length; index++) {
+                const element = ccr[index];
+                console.log("   子元素内容 :>> ", element.innerText);
+            }
+
+            /* 5.通过firstChild获取当前元素的所有子节点中，第一个节点
+                同样也包括空白的文本节点。
+                （如果我们写在一行的话就没有空吧文本节点）
+            */
+            var cFirst = city.firstChild;
+            console.log("firstChild :>> ", cFirst);
+
+            //  5.1获取当前元素中第一个子元素(不包括空白节点)
+            var cfe = city.firstElementChild;
+            console.log("firstElementChild :>> ", cfe.innerText);
+
+            //  5.2获取当前子元素的最后一个节点(包括空白节点)
+            var clc = city.lastChild;
+            console.log("lastChild :>> ", clc);
+            //  5.3获取当前子元素的最后一个元素(不包括空白节点)
+            var clc = city.lastElementChild;
+            console.log("lastChild :>> ", clc.innerText);
+        </script>
+    </body>
+</html>

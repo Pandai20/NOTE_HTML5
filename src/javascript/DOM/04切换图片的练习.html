@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>04切换图片的练习</title>
+        <style>
+            /* 清除默认样式 */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            #outer {
+                width: 250px;
+                background-color: gray;
+                margin: 0 auto;
+                text-align: center;
+                display: flex;
+                /* 设置主轴方向 */
+                flex-direction: column;
+                /* 设置元素居中 */
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="outer">
+            <p id="info"></p>
+            <img src="../../image/1.jpg" alt="image" />
+            <div>
+                <button id="prev">上一张</button>
+                <button id="next">下一张</button>
+            </div>
+        </div>
+
+        <!-- 让切换的时候能够调整图片 -->
+        <script>
+            // 1.获取图片标签的对象,这个是数组，但是img有且只有一个
+            var image = document.getElementsByTagName("img")[0];
+            console.log("image :>> ", image);
+
+            // 1.1 设置一个数组保存当前图片索引
+            var img_index = [
+                "../../image/1.jpg",
+                "../../image/2.jpg",
+                "../../image/3.jpg",
+                "../../image/4.jpg",
+                "../../image/5.jpg",
+            ];
+
+            var index = 1;
+            // 1.2设置图片上方的提示文字
+            var info = document.getElementById("info");
+            /*  getElementsByClassName也是获取数组的！！
+            var info1 = document.getElementsByClassName("info")[0]; 
+           */
+
+            function setCorrentImgIndex(number) {
+                info.innerHTML =
+                    "一共有" +
+                    img_index.length +
+                    "张图片," +
+                    "当前是第" +
+                    (number + 1) +
+                    "张";
+            }
+            setCorrentImgIndex(0);
+
+            // 2.设置点击事件
+            // 2.1获取上一张的点击事件
+            var prev = document.getElementById("prev");
+            prev.onclick = function () {
+                index--;
+                if (index < 0) {
+                    index = img_index.length - 1;
+                }
+                console.log("index :>> ", index);
+                setCorrentImgIndex(index);
+                image.src = img_index[index];
+            };
+            // 2.2获取上一张的点击事件
+            var next = document.getElementById("next");
+            next.onclick = function () {
+                index++;
+                if (index > img_index.length - 1) {
+                    index = 0;
+                }
+                setCorrentImgIndex(index);
+                image.src = img_index[index];
+            };
+        </script>
+    </body>
+</html>

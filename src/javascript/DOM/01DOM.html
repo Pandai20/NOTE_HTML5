@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>01DOM</title>
+        <!-- DOM : document object model -->
+    </head>
+    <body>
+        <!-- 在button标签中添加点击事件 -->
+        <!-- <button id="btn" onclick="alert('what f')">我是一个button</button> -->
+        <button id="btn" onclick="alert('what f')">我是一个button</button>
+        <script>
+            // 通过文档节点获取button对象
+            console.log("   document是什么 :>> ", document);
+
+            // 获取button对象
+            var button = document.getElementById("btn");
+            console.log("   button是什么 :>> ", button);
+
+            // 修改button里面的文字,innerHTML能把标签也写进去
+            button.innerHTML = "I'am a button!";
+
+            /* 为button事件绑定函数 */
+            button.onclick = function () {
+                alert("whatf");
+            };
+        </script>
+    </body>
+</html>

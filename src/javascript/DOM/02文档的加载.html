@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>02文档的加载</title>
+        <script>
+            /* html的执行过程是至上而下的，那么我们就必须等到页面加载完成了在执行某个操作 */
+
+            var button_Obj = document.getElementById("btn");
+            console.log(
+                "   这个时候页面没有加载完成，没有找到对应btn的对象 :>> ",
+                button_Obj
+            );
+
+            // 所以我们要等到页面完全加载完成以后再
+            var perhaps_New = false;
+            if (perhaps_New) {
+                // MDN推荐的写法
+                window.addEventListener("load", (event) => {
+                    console.log("   No1 page is fully loaded");
+
+                    // 当页面正常加载完成以后 我们再来创建点击事件
+                    var button_Obj = document.getElementById("btn");
+                    console.log(
+                        "   这个时候页面加载完成!btn对象 :>> ",
+                        button_Obj
+                    );
+
+                    button_Obj.addEventListener("click", (event) => {
+                        alert("happly");
+                    });
+                });
+            } else {
+                // 目前还是使用这种写法吧，后续会再学习es6
+                window.onclick = function () {
+                    let button_Obj = document.getElementById("btn");
+                    button_Obj.onclick = function () {
+                        alert("happly");
+                    };
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <button id="btn">按钮</button>
+    </body>
+</html>

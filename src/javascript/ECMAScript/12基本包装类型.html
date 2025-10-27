@@ -52,9 +52,25 @@
 
             /* 复杂数据类型  数组 */
 
-            console.log("=========3.简单类型和复杂类型传参==========");
-            // 简单类型传参   就相当于形参是拷贝  实参不会变
-            // 复杂类型传参   就相当于指针        实参会改变
+            console.log("=========4.三个包装类,开发中基本不会使用==========");
+            //  1.String()  将基本数据类型字符串转化为String对象
+            //  2.NUmber()  将基本数据类型字符串转化为NUmber对象
+            //  3.Boolean()  将基本数据类型字符串转化为Boolean对象
+
+            // 创建一个number对象
+            var num = new Number(2);
+            console.log("   Number num:>> ", num);
+            console.log("   typeof Number :>> ", typeof num);
+
+            // 创建一个String对象
+            var str_obj = new String("panda");
+            console.log("   String str_obj:>> ", str_obj);
+            console.log("   typeof String :>> ", typeof str_obj);
+
+            // 创建一个Boolean对象
+            var bool_obj = new Boolean(true);
+            console.log("   Boolean bool_obj:>> ", bool_obj);
+            console.log("   typeof Boolean :>> ", typeof bool_obj);
         </script>
     </head>
     <body></body>

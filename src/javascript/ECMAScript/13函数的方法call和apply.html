@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>13函数的方法call和apply</title>
+    </head>
+    <body>
+        <!-- 
+        apply 和 call  都能直接调用函数，但是可以将一个对象指定为一个参数
+        
+        
+        -->
+        <script>
+            console.log("========1.apply和call=================");
+            function fun() {
+                // 如果直接调，this就是window
+                // 如果call、apply调，this就是传入的对象
+                console.log("   fun().this :>> ", this);
+            }
+            // fun.apply();
+            // fun.call();
+            var boj = {
+                name: "panda",
+            };
+            // fun.call(boj);
+            fun.apply(boj);
+
+            console.log("========2.apply和call的不同=================");
+            /* call、apply的不一样的地方
+            1.当传入的参数有实参的时候，applay的实参必须使用数组包含
+           
+            */
+
+            function fun1(a, b) {
+                // 如果call、apply调，this就是传入的对象
+                console.log("   fun1().this :>> ", this);
+                console.log("   a :>> ", a);
+                console.log("   b :>> ", b);
+            }
+            var boj1 = {
+                name: "call",
+            };
+            var boj2 = {
+                name: "apply",
+            };
+            fun1.call(boj1, 6, 6);
+            fun1.apply(boj2, [9, 9]);
+        </script>
+    </body>
+</html>
